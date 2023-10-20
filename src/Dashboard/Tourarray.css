@@ -1,0 +1,52 @@
+.dash_array_tour
+{
+    margin-left: 22rem;
+    margin-top: 3rem;
+   
+}
+.tm
+{
+  width: 4rem;
+}
+.bitte
+{
+  background-color: brown;
+}
+td button {
+  margin-bottom: 10px; /* Adjust the value as needed */
+}
+
+
+td:last-child button {
+  margin-right: 2px;
+}
+
+
+ table {
+    border-collapse: collapse;
+    width: 100%;
+     border: none;
+      border-color: white;
+  }
+  th, td {
+    text-align: center;
+    border: 0px;
+  }
+  th {
+    background-color:white ; ;
+    color: black;
+  }
+  tr:nth-child(odd) {
+    background-color:lightgrey; /* Color for column 1 */
+   border: none;
+ 
+  }
+  tr:nth-child(even) {
+    background-color:white ; /* Color for column 2 */
+   border: none;
+   border-color: white;
+  }
+
+    /* td:nth-child(3) {
+    background-color: #5733FF;} /* Color for column 3 */
+  

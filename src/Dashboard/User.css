@@ -1,0 +1,15 @@
+.USER_DISPLAY
+{
+    margin-left: 22rem;
+    margin-top: 4rem;
+}
+.img_A
+{
+  width: 40px; /* Adjust the width and height as needed */
+  height: 40px;
+  border-radius: 50%; /* Makes the image circular */
+ 
+}
+.A{
+  background-color: brown;
+}

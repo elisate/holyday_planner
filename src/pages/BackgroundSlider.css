@@ -1,0 +1,61 @@
+/* Styles for the background slider section */
+.background-slider {
+  position: relative;
+  height:36rem;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   animation: scrollFromRight 3s ease;
+}
+
+.slider-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 1; /* Place the content above the background slider */
+     animation: scrollFromRight 3s ease;
+}
+
+/* Styles for the text elements within the slider */
+.bigtext {
+  margin-bottom: 20px;
+}
+
+.text1 h1 {
+  font-size: 36px;
+}
+
+.text2 h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.text3 {
+  font-size: 18px;
+}
+
+.subtext3 {
+  font-size: 16px;
+}
+
+
+.home_section2{
+  /* Add styles for this section as needed */
+}
+
+
+
+.background-image {
+ 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  
+
+ animation: scrollFromRight 3s ease;
+}

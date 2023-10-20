@@ -1,0 +1,77 @@
+.dashhold {
+  margin-top: -2rem;
+  position: fixed;
+  box-shadow: 0 0 10px rgb(45, 45, 45);
+}
+.photodash {
+  width: 60px; /* Adjust the size as needed */
+  height: 60px; /* Adjust the size as needed */
+  border-radius: 50%; /* Makes it a circle */
+  object-fit: cover; /* Ensures the image covers the entire circle */
+  border: solid 1px mediumvioletred;
+}
+.dushboard_header1 {
+  background-color: white; /* bg color change*/
+
+  border-top-left-radius: 20px; /* Adjust the value as needed */
+  border-bottom-left-radius: 20px;
+  width: 20rem;
+  height: 37.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 0 5px black;
+
+  padding-top: 1.5rem;
+  color: black;
+}
+.image_sidebar {
+  padding-left: 1rem;
+}
+
+.image_sidebar {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.nameelisa {
+  padding-top: 1.2rem;
+  color: #333;
+}
+
+.sidebar_subholder {
+  padding-left: 2.5rem;
+}
+
+.sidebar_subholder ul li {
+  list-style-type: none; /* Remove the default list bullet */
+  margin-bottom: 10px; /* Add spacing between list items */
+}
+
+ .sidebar_subholder ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 3px;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.list_dash {
+  color: rgb(215, 43, 152);
+}
+.logout {
+  padding-top: 1.3rem;
+}
+.dom_dash {
+  color: rgb(215, 43, 152);
+}
+.dom_dash1 {
+  color: blue;
+}
+
+.custom-background-color {
+  background-color: white;
+  height: 50rem;
+  margin-top: 0px;
+  color: black;
+  padding-top: 3rem;
+}

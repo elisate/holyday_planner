@@ -1,0 +1,34 @@
+import React from "react";
+
+const Userarray = [
+  {
+    id: "1",
+    userprofile: "/elisa2.jpeg",
+    username: "ELISA",
+    email: "elisa@gmail.com",
+    userpassword: "12345",
+  },
+  {
+    id: "2",
+    userprofile: "/elisa2.jpeg",
+    username: "VICENT",
+    email: "vicent@gmail.com",
+    userpassword: "1213455",
+  },
+
+  {
+    id: 3,
+    userprofile: "/elisa2.jpeg",
+    username: "JUSTIN",
+    email: "justin@gmail.com",
+    userpassword: "123444",
+  },
+  {
+    id: 4,
+    userprofile: "/elisa2.jpeg",
+    username: "Elyse",
+    email: "Elyse@gmail.com",
+    userpassword: "123444",
+  },
+];
+export default Userarray;
