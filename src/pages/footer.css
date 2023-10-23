@@ -1,8 +1,9 @@
 .tooter{
     background-color: #323232;
     height: 29rem;
+      
 
-   gap: 5rem;
+      width: 71.7rem;
 
 }
 
@@ -52,9 +53,9 @@ border: 0px;
     padding-top:2.8rem;
 }
 .allcontain_foot{
-   display: flex;
-    flex-direction: row;
-gap:8rem;
+display: flex;
+flex-direction: row;
+gap:4rem;
 }
 .textt
 {
@@ -78,13 +79,18 @@ gap:8rem;
 .hline2 {
 font-size: 1.5rem;
 padding-top: 1.6rem;
+display: flex;
+flex-direction: column;
+gap: 0.3rem;
+padding-bottom: 1rem;
+
 }
 
 .line_t {
-  width: 50px; 
+  width: 15rem; 
   border-top: 1px solid white;
   margin: 5px auto; 
-  width: 20.5rem;
+ 
 }
 
 .conto1
@@ -112,8 +118,8 @@ padding-left: 1rem;
 .contohold
 {
  display: flex;
-    flex-direction: column;
-    gap:1.3rem;
+flex-direction: column;
+gap:1.3rem;
 }
 .footsocial
 {
@@ -139,7 +145,6 @@ padding-left: 1rem;
 }
 
 .textt2 ul li {
-/* Adjust the amount of space as needed */
 margin: 10px 0;
 
   gap: 2rem;
@@ -148,6 +153,46 @@ margin: 10px 0;
 
 }
 .textt2 {
+padding-left: 1rem;
+}
+
+ @media screen and (max-width: 768px){
+
+.allcontain_foot{
+ display: flex;
+ flex-direction: column;
+ gap:1rem;
+
+}
+
+.tooter{
+    background-color: #323232;
+    gap: 2rem;
+    height:76rem;
+
+}
+
+.container1
+{
+    padding-top:2.8rem;
+    padding-left: 1rem;
+   
+      
+}
+.container2
+{
+    display: flex;
+    flex-direction: column;
+    padding-top:2.8rem;
     padding-left: 1rem;
 }
 
+.textt2 {
+padding-left: 2rem;
+}
+
+.contohold
+{
+ padding-left: 2rem;   
+}
+} 

@@ -39,7 +39,7 @@
   }
   .para23 {
     
-    margin-left: 28rem;
+    margin-left: 22rem;
     margin-top: 10px;
   }
 
@@ -188,17 +188,14 @@
   }
   .trip-description {
     padding: 10px;
-    width: 50%;
-    margin-left: 3rem;
+   
+    margin-left: 9.5rem;
     margin-top: 1.4rem;
-  }
-  .trip-description p {
-    font-size: 17px;
     color: #2B2B2B;
-    width: 37rem;
-
-    margin-left: 6.5rem;
+    font-size: 0.9rem;
+    width: 30rem;
   }
+  
   table {
     width: 80%;
     border-collapse: collapse;
@@ -237,6 +234,7 @@
    color: #000;
    background-color:white;
    margin-top: -20rem;
+   
     
 }
 
@@ -308,7 +306,7 @@ width: 13rem;
     border: solid 1px gray;
     text-align: center;
     padding: .8rem;
-    font-size: 1rem;
+    font-size: 0.6rem;
 }
 .div1:hover{
   background-color: #C29D59;
@@ -319,7 +317,7 @@ width: 13rem;
     background-color: #C29D59;
     text-align: center;
     padding: .8rem;
-    font-size: 1rem;
+   font-size: 0.6rem;
 }
 
 .leftDetails {
@@ -336,27 +334,14 @@ width: 13rem;
   height: 45rem;
 }
  
-  .detail-information {
-
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    width: 40%;
-    justify-content: center;
-    border: 2px solid #ccc;
-    padding: 2px;
-    margin-top: -16rem;
-    margin-left: 6rem;
-    border-radius: 5px;
-    margin-left: 10rem;
-  }
+ 
 
    .side-form1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 57rem;
+    margin-left: 47rem;
     padding-top: 2rem;
     width: 24%;
     position: absolute;
@@ -366,18 +351,22 @@ width: 13rem;
    gap: 1rem;
  
   }
-.detail-information
-{
-  margin-top: 20rem;
-}
+  .detail-information
+  {
+    margin-top: 20rem;
+    width:30rem;
+    margin-left: 10rem;
+    padding-top: 1rem;
+  }
 
 .im{
   position: relative;
+  background-color: white;
  
 }
 .tableo
 {
-  width: 36.5rem;
+  width: 30.7rem;
   margin-left: 10rem;
   margin-top: 4rem;
 }
@@ -399,4 +388,82 @@ width: 13rem;
 font-size: 0.9rem;
 color: gray;
 
+}
+
+@media screen and (max-width: 768px){
+
+.ttable {
+   border:  solid 1px gray;
+  
+    display: flex;
+   flex-direction: column;
+    border-radius: 5px;
+    margin-left: -8.8rem;
+    
+}
+.detail-information
+{
+width: 20rem;
+height: 2rem;
+}
+.div1
+{
+  width: 20rem;
+  height: 3rem;
+  
+}
+ .para23 {
+    
+    margin-left: -3rem;
+    padding-top: 12rem;
+  }
+  .planned-trip
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left:1.5rem;
+    width: 20rem;
+  }
+  .trip-description
+  {
+
+  margin-left: 1rem;
+  width: 21rem;
+  }
+  .tableo
+  {
+    margin-left: 1rem;
+    width: 22rem;
+  }
+  .side-form1
+  {
+    margin-left: 2rem;
+    margin-top: 88rem;
+    width: 10rem;
+  }
+
+  .im
+  {
+    height:195rem;
+  }
+  .dudu
+  {
+    width: 20rem;
+    margin-left:10rem;
+  }
+  .dusu
+  {
+   width: 20rem;
+    margin-left:10rem; 
+  }
+  .sasa
+  {
+   width: 20rem;
+    margin-left:10rem;  
+  }
+  .dudi{
+  width: 20rem;
+    margin-left:10rem; }
+ 
 }

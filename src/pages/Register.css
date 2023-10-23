@@ -9,7 +9,7 @@
     width: 23.7rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    margin-left: 14rem;
+    margin-left: 7rem;
     margin-bottom: 3rem;
     color: black;
 
@@ -48,7 +48,7 @@ button {
 .R{
     
   
-     width: 22rem;
+  width: 22rem;
   height: 2.6rem;
    background-color: white;
   border: solid 1px black;
@@ -82,4 +82,39 @@ toyou
 {
 color: black;
 padding-top: 4rem;
+}
+
+@media screen and (max-width: 768px){
+.content_register
+{
+    padding-top:6rem; /* Adjust the padding value to control the placement */
+    color: black;
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    box-shadow: 0 0 5px black;
+ 
+    
+}
+.container_register
+{
+    margin-left: 1rem;
+    width: 18rem;
+}
+
+.R{
+ width: 10rem;
+  border: solid 2px black;
+  padding-left: 0.6rem;
+  border-radius: 5px;
+  color: black;
+  z-index: 1;
+}
+.registerimage
+{
+    width: 23rem;
+    padding-left: 1.3rem;
+}
+
+
 }

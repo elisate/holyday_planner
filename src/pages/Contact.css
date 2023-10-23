@@ -142,5 +142,17 @@
 .contact_map
 {
     margin-top: -10rem;
-    margin-left: 17rem;
+    margin-left:12rem;
+    width: 5rem;
+}
+
+@media screen and (max-width: 768px){
+
+.CONTACT_container
+{
+ 
+   
+
+}
+
 }

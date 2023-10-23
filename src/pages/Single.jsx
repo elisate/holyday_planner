@@ -89,11 +89,11 @@ const Single = () => {
             </div>
           </div>
           <div className="planned-trip">
-            <p class="trip-duration">2 days</p>
-            <p class="trip-duration">6 People</p>
-            <p class="trip-participants">18 </p>
-            <p class="trip-destination">Greece</p>
-            <p class="trip-destination"> Discovery</p>
+           <div><p class="trip-duration">2 days</p></div> 
+         <div>  <p class="trip-duration">6 People</p></div> 
+          <div> <p class="trip-participants">18 </p></div> 
+           <div><p class="trip-destination">Greece</p></div>
+          <div><p class="trip-destination"> Discovery</p></div>  
           </div>
           <div className="trip-description">
             <p>
@@ -140,13 +140,7 @@ const Single = () => {
               </tbody>
             </table>
           </div>
-
-          <div className="tour-mission2">
-            
-            
-
-           
-          </div>
+          
         </div>
       </div>
     </section>

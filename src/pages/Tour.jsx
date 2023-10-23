@@ -28,17 +28,17 @@ function Tour() {
   }, []);
 
   return (
-    <>
-      <section className="background_image">
+    <section>
+      <div className="background_image">
         <div className="content">
           <h1 className="conte">Tours List</h1>
         </div>
-      </section>
-      <section className="second">
+      </div>
+      <div className="second">
         <div className="tour_container">
           <div className="tour_a">
             <div className="tour_a1">
-              <input type="text" value="Sort by:" className="select0" />
+              Sort by:
             </div>
             <div className="tour_a2">
               <select id="release date" name="release date" className="select1">
@@ -301,15 +301,15 @@ function Tour() {
             <p>expert team and we are happy to talk to</p>
             <p>you.</p>
           </div>
-          <div>
+          <div className="end2">
             <p>holidayplanners@gmail.com</p>
           </div>
-          <div>
+          <div className="end2">
             <p>+123 456 7890</p>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 export default Tour;

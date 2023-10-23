@@ -10,7 +10,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      <section className="contact2_holder">
+      <div className="contact2_holder">
         <div className="contact2">
           <div className="contact2a">
             <div>
@@ -57,9 +57,9 @@ export default function Contact() {
             </button>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section>
+      <div>
         <div className="CONTACT_container">
           <div className="TB3_contact">
             <div className="contact_text1">
@@ -92,8 +92,8 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </section>
-      <section className="contact_textend">
+      </div>
+      <div className="contact_textend">
         <div className="address1_contact">
           <div className="address_text1">
             <b>INDIA OFFICE</b>
@@ -125,7 +125,7 @@ export default function Contact() {
           </div>
 
         </div> */}
-      </section>
+      </div>
       <section className='contact_map'>
         <div className='contact_map'>
           <iframe

@@ -56,7 +56,7 @@ function First() {
         </div>
         <div className="section1">
           <div className="logo">
-            <img src="logo.png" />
+            <img src="logo.png" className="logoo" />
           </div>
           <div className="subsection">
             <div className="but">

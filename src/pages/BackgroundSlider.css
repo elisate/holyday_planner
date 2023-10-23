@@ -42,13 +42,6 @@
   font-size: 16px;
 }
 
-
-.home_section2{
-  /* Add styles for this section as needed */
-}
-
-
-
 .background-image {
  
   background-size: cover;
@@ -58,4 +51,30 @@
   
 
  animation: scrollFromRight 3s ease;
+}
+
+@media screen and (max-width: 768px){
+
+  .bigtext {
+  margin-bottom: 20px;
+}
+
+.text1{
+  font-size: 20px;
+}
+.text2{
+  font-size: 16px;
+  font-weight: bold;
+  width: 7.9rem;
+  margin-left: 1.3rem;
+}
+
+.text3 {
+  font-size: 18px;
+}
+.subtext3 {
+  font-size: 16px;
+}
+ 
+ 
 }

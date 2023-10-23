@@ -9,33 +9,33 @@ import { Link } from 'react-router-dom';
   return (
     <section className="login_section">
       <div className="login_manager">
-        <form className='LOGINF'>
+        <form className="LOGINF">
           <div className="loggin">
-            <div>
+              <div >
               <div>
                 <b>LOGIN</b>
               </div>
               <div>
-                <p>
+                <p className='Signl'>
                   Does Not Have An Account Yet &nbsp;
                   <a href="Signup_page" className="alog">
                     Sign Up
                   </a>
                 </p>
               </div>
-            </div>
-            <div>
-              <p>
-                <b>Email Address</b>
-              </p>
-              <p>
-                <input
-                  type="text"
-                  placeholder="you@example.com"
-                  className="text_login"
-                />
-              </p>
-            </div>
+              <div className='solve2'>
+                <p>
+                  <b>Email Address</b>
+                </p>
+                <p>
+                  <input
+                    type="text"
+                    placeholder="you@example.com"
+                    className="text_login"
+                  />
+                </p>
+              </div>
+            </div>  
             <div>
               <div className="password1">
                 <div>
@@ -56,7 +56,7 @@ import { Link } from 'react-router-dom';
                   className="login_butto0"
                 />
               </div>
-            </div>
+            </div> 
 
             <div>
               <input
@@ -68,13 +68,12 @@ import { Link } from 'react-router-dom';
               Remember Me
             </div>
 
-            <div>
-              <button
-                type="submit"
-                className="login_butto1"
-             
-              
-                > <Link to='/Dashboard/Users' className='login_butto1'>LOGIN</Link>
+            <div className="login_butto1">
+              <button type="submit" className="login_button">
+                
+                <Link to="/Dashboard/Users" >
+                  LOGIN
+                </Link>
               </button>
             </div>
             <div className="login_text">
@@ -94,8 +93,7 @@ import { Link } from 'react-router-dom';
             </div>
           </div>
         </form>
-
-        <div>
+        <div className="loginimage">
           <img src="login-user.jpg" className="loginimage" />
         </div>
       </div>

@@ -8,14 +8,14 @@ import Cardarray2 from './pages/Cardarray2';
 
 function Home() {
   return (
-    <div className="HOME">
-      <section className="bigsection">
+    <section className="HOME">
+      <div className="bigsection">
         <body>
           <BackgroundSlider />
         </body>
-      </section>
+      </div>
 
-      <section className="home_section2">
+      <div className="home_section2">
         <div className="section2_a">
           <div>
             <input
@@ -149,9 +149,9 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
-      <section className="home_sec1">
-        <div className="offer_sec1">
+
+        <div className='resp_text'>
+      <div className="offer_sec1">
           <p>Amazing Tours</p>
         </div>
 
@@ -159,7 +159,9 @@ function Home() {
           <p>Trending, Best Selling Tours And</p>
         </div>
         <div className="sec3">Fun Destinations</div>
+</div>
 
+      <div className="home_sec1">
         <div className="homecards">
           <div className="mapping">
             {Cardarray2.map((item) => (
@@ -219,8 +221,8 @@ function Home() {
             ))}
           </div>
         </div>
-      </section>
-    </div>
+      </div></div>
+    </section>
   );
 } 
 export default  Home
