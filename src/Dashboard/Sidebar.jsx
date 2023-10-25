@@ -39,31 +39,8 @@ function Sidebar() {
               <FaLocationDot /> <a href="/">Place </a>
             </li>
             <li>
-              <BiSolidPlaneAlt /> <a href="tour_table">Tour</a>
-            </li>
-            <li>
-              <CiCalendarDate /> <a href="/">Upcoming</a>
-            </li>
-            <li>
-              <FaCampground />
-              <a href="/">Camps</a>
-            </li>
-
-            <li>
-              <FaRegCalendarAlt />
-              <a href="calender">Calender</a>
-            </li>
-            <li>
-              <BsChatDots /> <a href="/">Chart</a>
-            </li>
-            <li>Popular places</li>
-            <li className="dom_dash1">
-              <BsFillCircleFill /> <a href="/">Olso/Norway</a>
-            </li>
-            <li className="dom_dash">
-              <BsFillCircleFill />
-              <a href="/">Muai/Huwaii</a>
-            </li>
+              <BiSolidPlaneAlt /><a href="tours">Tour</a>
+       </li>
 
             <li className="list_dash">
               <MdExpandMore />
@@ -73,7 +50,7 @@ function Sidebar() {
             </li>
 
             <li className="logout">
-              <AiOutlineLogout /> <a href="log_to_out">Logout</a>
+              <AiOutlineLogout /> <a href="/">Logout</a>
             </li>
           </ul>
         </div>

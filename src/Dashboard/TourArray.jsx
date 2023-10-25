@@ -1,88 +1,72 @@
 import React, { useState } from "react";
-import Tourtable from "./Tourtable";
 import "./Tourarray.css";
+import { useContext } from "react";
+import { Appcontext } from "../context/Contextprovider";
+import { mycontext } from "../context/Contextprovider";
+import Toursform from "./Toursform";
+import AddFormtours from "./AddFormtours";
 
-const TourArray = () => {
-  const [editingItem, setEditingItem] = useState(null);
-  const [tourItems, setTourItems] = useState(Tourtable);
+function TourArray () {
+  const { listcard } = mycontext();
 
-  const handleEditClick = (item) => {
-    setEditingItem(item);
-  };
+const [isEditModalOpen, setEditModalOpen] = useState(false);
+const handleEditClick = () => {
+  setEditModalOpen((previsEditModal) => !previsEditModal);
+};
+const [isCreate, setCreate] = useState(false);
+const handleCreateClick = () => {
+  setCreate((previsEditModal) => !previsEditModal);
+};
 
-  const handleSaveClick = (item) => {
-    // Implement your logic to save the edited item here
-    // You can use an API call or update the local state
-    // For this example, we'll update the local state
-    const updatedTourItems = tourItems.map((tour) =>
-      tour.id === item.id ? item : tour
-    );
-    setTourItems(updatedTourItems);
-    setEditingItem(null);
-  };
-
-  const handleDeleteClick = (item) => {
-    // Implement your logic to delete the item here
-    // You can use an API call or update the local state
-    // For this example, we'll remove the item from the local state
-    const updatedTourItems = tourItems.filter((tour) => tour.id !== item.id);
-    setTourItems(updatedTourItems);
-  };
 
   return (
     <div className="dash_array_tour">
+      {isCreate && <AddFormtours handleCreateClick={handleCreateClick} />}
+      {isEditModalOpen && <Toursform handleEditClick={handleEditClick} />}
+
+      <div className="add">
+        <button type="option" onClick={handleCreateClick}>
+          Add Tours
+        </button>
+      </div>
       <table>
         <thead>
-          <tr>
+          <tr className="tab1">
+            <th>gallery</th>
             <th>Image</th>
             <th>Country</th>
             <th>Description</th>
-            <th>Amount</th>
-            <th>Edit/Delete</th>
+            <th>Group size</th>
+            <th>Duration</th>
+            <th>Edit</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
-          {tourItems.map((item) => (
-            <tr key={item.id}>
+          {listcard.map((item) => (
+            <tr>
+              <td className="gl">{item.Gallery}</td>
               <td>
-                <img src={item.image} alt="Country" className="tm" />
+                <img
+                  src={item.backdropImage}
+                  alt={`Image for ${item.Galley}`}
+                  className="img_tours"
+                />
+              </td>
+
+              <td>{item.Title}</td>
+              <td>{item.destination}</td>
+              <td>{item.GroupSize}</td>
+              <td>{item.fromMonth}</td>
+              <td>
+                <button type="option" onClick={handleEditClick}>
+                  Edit
+                </button>
               </td>
               <td>
-                {editingItem === item ? (
-                  <input type="text" value={item.country} />
-                ) : (
-                  item.country
-                )}
-              </td>
-              <td>
-                {editingItem === item ? (
-                  <input type="text" value={item.desc1} />
-                ) : (
-                  item.desc1
-                )}
-              </td>
-            
-              <td>
-                {editingItem === item ? (
-                  <input type="text" value={item.amount} />
-                ) : (
-                  item.amount
-                )}
-              </td>
-             
-              <td>
-                {editingItem === item ? (
-                  <>
-                    <button onClick={() => handleSaveClick(item)} >Save</button><br/>
-                  </>
-                ) : (
-                  <> 
-                    <button onClick={() => handleEditClick(item)}>Edit</button>
-                    <button onClick={() => handleDeleteClick(item)} className="bitte">
-                      Delete
-                    </button>
-                  </>
-                )}
+                <button type="cancel" className="A">
+                  delete
+                </button>
               </td>
             </tr>
           ))}

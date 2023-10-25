@@ -4,31 +4,12 @@ import Cardlist from "./Cardlist";
 import { Link } from "react-router-dom";
 import fetching from "../API/fetching";
 import { useState, useEffect } from "react";
+import { mycontext } from "../context/Contextprovider";
 function Tour() {
-  const [listcard, setListcard] = useState([]);
-  useEffect(() => {
-    const fetchapi = async () => {
-      try {
-        const response = await fetching.get(
-          "https://holiday-planner-4lnj.onrender.com/api/v1/tour"
-        );
-        setListcard(response.data);
-      } catch (err) {
-        if (err.response) {
-          console.log(err.response.data.message);
-          console.log(err.response.status);
-          console.log(err.response.headers);
-        } else {
-          console.log(listcard);
-          console.log("errorr");
-        }
-      }
-    };
-    fetchapi();
-  }, []);
+  const { listcard } = mycontext();
 
   return (
-    <section>
+    <section className="second">
       <div className="background_image">
         <div className="content">
           <h1 className="conte">Tours List</h1>
@@ -37,9 +18,7 @@ function Tour() {
       <div className="second">
         <div className="tour_container">
           <div className="tour_a">
-            <div className="tour_a1">
-              Sort by:
-            </div>
+            <div className="tour_a1">Sort by:</div>
             <div className="tour_a2">
               <select id="release date" name="release date" className="select1">
                 <option value="">Tour Date</option>
@@ -59,25 +38,20 @@ function Tour() {
             </div>
           </div>
           <div className="JUST_hold">
-            {Cardlist.map((item) => (
+            {listcard.map((item) => (
               <div className="tourC_subb">
-                
-                  
-                    <div className="JUST1">
-                      <img src={item.image} className="TB_innovation" />
-                    </div>
-                  
-                  
-               
-                <div className="TB2">
+                <div className="JUST1">
+                  <img src={item.backdropImage} className="TB_innovation" />
+                </div>
 
-  <div className="JUST2">
-                      <p className="textb1">{item.country}</p>
-                    </div>
+                <div className="TB2">
+                  <div className="JUST2">
+                    <p className="textb1">{item.Title}</p>
+                  </div>
 
                   <div className="TB3">
                     <div className="tbtext2">
-                      <p>{item.desc1}</p>
+                      <p>{item.destination}</p>
                       <p></p>
                     </div>
 
@@ -91,11 +65,11 @@ function Tour() {
                   </div>
                   <div className="TB4">
                     <div>
-                      <p className="duratext">{item.duration1}</p>
+                      <p className="duratext">{item.fromMonth}</p>
                       <p className="daystext">{item.duration2}</p>
                     </div>
                     <div>
-                      <p className="duratext">{item.groupsize1}</p>
+                      <p className="duratext">{item.GroupSize}</p>
                       <p className="daystext">{item.groupsize2}</p>
                     </div>
                   </div>
@@ -278,8 +252,6 @@ function Tour() {
             </div>
           </div>
         </form>
-
-       
 
         <div className="tour-text">
           <div className="tour-text1">

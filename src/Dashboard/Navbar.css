@@ -11,8 +11,12 @@
 {
   display: flex;
   flex-direction: row;
-  gap:44rem;
+  gap:37rem;
   padding-top: 2rem;
+}
+.yane
+{
+  padding-left: 0.4rem;
 }
 .holder_nav_dash
 {
@@ -21,13 +25,13 @@
 
     gap:2rem;
     background-color:white;
-    margin-left: 20rem;
+    margin-left: 12rem;
     position: fixed;
     margin-top: -2rem;
     width: 70rem;
     z-index: 8888;
     color: black;
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 10px black;
       border-top-right-radius: 5px; 
       margin-top: 0.1rem;
   

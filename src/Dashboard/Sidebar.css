@@ -15,13 +15,14 @@
 
   border-top-left-radius: 20px; /* Adjust the value as needed */
   border-bottom-left-radius: 20px;
-  width: 20rem;
+  width: 12rem;
   height: 37.5rem;
   margin-top: 2rem;
-  box-shadow: 0 0 5px black;
+  box-shadow: 0 0 7px black;
 
   padding-top: 1.5rem;
   color: black;
+  font-size: larger;
 }
 .image_sidebar {
   padding-left: 1rem;
@@ -43,7 +44,7 @@
 
 .sidebar_subholder ul li {
   list-style-type: none; /* Remove the default list bullet */
-  margin-bottom: 10px; /* Add spacing between list items */
+  margin-bottom: 20px; /* Add spacing between list items */
 }
 
  .sidebar_subholder ul li a {
@@ -59,7 +60,8 @@
   color: rgb(215, 43, 152);
 }
 .logout {
-  padding-top: 1.3rem;
+  padding-top: 8rem;
+  
 }
 .dom_dash {
   color: rgb(215, 43, 152);

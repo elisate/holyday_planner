@@ -1,52 +1,57 @@
-.dash_array_tour
-{
-    margin-left: 22rem;
-    margin-top: 3rem;
-   
+.dash_array_tour {
+  margin-left: 10rem;
+  margin-top: 6rem;
+  background-color: white;
+  height: fit-content;
+  padding-bottom: 3rem;
+ width: fit-content;
 }
-.tm
-{
-  width: 4rem;
-}
-.bitte
-{
-  background-color: brown;
-}
+
 td button {
   margin-bottom: 10px; /* Adjust the value as needed */
 }
 
-
-td:last-child button {
+.dash_array_tour td:last-child button {
   margin-right: 2px;
 }
 
+.dash_array_tour table {
+  width: fit-content;
+  box-shadow: 0 0 10px black;
+}
+.dash_array_tour th,
+.dash_array_tour td {
+  text-align: center;
+  border: none;
+}
+.dash_array_tour th {
+  background-color: white;
+  color: black;
+}
+.dash_array_tour tr:nth-child(odd) {
+  background-color: lightgrey;
+  border: none;
+}
+.dash_array_tour tr:nth-child(even) {
+  background-color: white;
+  border: none;
+  border-color: white;
+}
 
- table {
-    border-collapse: collapse;
-    width: 100%;
-     border: none;
-      border-color: white;
-  }
-  th, td {
-    text-align: center;
-    border: 0px;
-  }
-  th {
-    background-color:white ; ;
-    color: black;
-  }
-  tr:nth-child(odd) {
-    background-color:lightgrey; /* Color for column 1 */
-   border: none;
- 
-  }
-  tr:nth-child(even) {
-    background-color:white ; /* Color for column 2 */
-   border: none;
-   border-color: white;
-  }
-
-    /* td:nth-child(3) {
-    background-color: #5733FF;} /* Color for column 3 */
-  
+.img_tours {
+  width: 40px;
+  height: 40px;
+}
+.A {
+  background-color: brown;
+}
+.add {
+  margin-left: 51rem;
+  position: fixed;
+  margin-top: -4rem;
+}
+.dash_array_tour .gl
+ {
+  font-size:1px;
+  width: 2rem;.
+}

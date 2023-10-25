@@ -19,8 +19,8 @@
 .second
 {
     background-color: white;
-    height: 85rem;
-   
+  height: fit-content;
+   padding-bottom: 5rem;
 }
 .tour_a{
   display: flex;
@@ -233,6 +233,7 @@ font-size:0.6rem;
   display: flex;
   flex-direction:column;
   margin-left: -2rem;
+  
 }
 
 .holder_numbertour
@@ -452,6 +453,7 @@ color: gray;
  margin-left:8rem;
  margin-top: 4rem;
  gap: 3rem;
+
  
 }
 .tourC_subb
@@ -534,7 +536,8 @@ color: black;
 .second
 {
     background-color: white;
-   height: 232rem;
+   height: fit-content;
+   padding-bottom: 5rem;
    
 }
 

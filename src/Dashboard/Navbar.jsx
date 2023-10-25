@@ -8,7 +8,7 @@ function Navbar() {
    
       <div className="holder_nav_dash">
         <div className="end_navbar_top1">
-          <div>
+          <div className="yane">
             <h4> Hello,ELISA</h4>
           </div>
           <div>

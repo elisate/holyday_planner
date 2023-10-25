@@ -1,62 +1,103 @@
-import React from 'react'
+import React, { useState } from 'react';
 import './Tour.css';
 import './login_page.css';
 import {FcGoogle} from 'react-icons/fc';
 import {LiaFacebookF} from 'react-icons/lia';
-import { Link } from 'react-router-dom';
+
+import axios from 'axios';
+
  function Login() {
+  const [formData,setFormData]=useState({
+
+    email:"",
+    password:"",
+    
+  })
+
+    const [errors, setErrors] = useState({});
+    const handlechange = (e) => {
+      const { name, value } = e.target;
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    };
+
+      const handlesubmit = async (e) => {
+        e.preventDefault();
+
+         console.log(formData);
+        try {
+          const res = await axios.post(
+            "https://holidayplanner.onrender.com/auth/login",
+            formData
+          );
+          window.location.href = "/dashboard";
+        } catch (error) {
+          console.log(error);
+          alert(error.response.data.message);
+        }
+      };
 
   return (
     <section className="login_section">
       <div className="login_manager">
-        <form className="LOGINF">
+        <form className="LOGINF" onSubmit={handlesubmit}>
           <div className="loggin">
-              <div >
+            <div>
               <div>
                 <b>LOGIN</b>
               </div>
               <div>
-                <p className='Signl'>
+                <p className="remove">
                   Does Not Have An Account Yet &nbsp;
                   <a href="Signup_page" className="alog">
                     Sign Up
                   </a>
                 </p>
               </div>
-              <div className='solve2'>
-                <p>
+              <div className="solve2">
+                <p className="remove">
                   <b>Email Address</b>
                 </p>
                 <p>
                   <input
                     type="text"
+                    name="email"
                     placeholder="you@example.com"
                     className="text_login"
+                    onChange={handlechange}
                   />
                 </p>
+                <p className="login_notfy"></p>
               </div>
-            </div>  
+            </div>
             <div>
               <div className="password1">
-                <div>
+                <div className="remove">
                   <b>Password</b>
                 </div>
                 <div>
-                  <a href="/" className="alog">
+                  <a href="/" className="remove">
                     Forget Password
                   </a>
                 </div>
               </div>
 
               <div>
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="enter 6 characters or more"
-                  className="login_butto0"
-                />
+                <p>
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="enter 6 characters or more"
+                    className="login_butto0"
+                    required
+                    onChange={handlechange}
+                  />
+                </p>
+                <p className="login_notfy"></p>
               </div>
-            </div> 
+            </div>
 
             <div>
               <input
@@ -64,16 +105,14 @@ import { Link } from 'react-router-dom';
                 value="Remember Me"
                 name="Remember Me"
                 className="contact_re"
+                
               />
               Remember Me
             </div>
 
             <div className="login_butto1">
               <button type="submit" className="login_button">
-                
-                <Link to="/Dashboard/Users" >
-                  LOGIN
-                </Link>
+                LOGIN
               </button>
             </div>
             <div className="login_text">
@@ -85,7 +124,11 @@ import { Link } from 'react-router-dom';
               </div>
 
               <div>
-                <button id="facebook" className="login_buttoa1">
+                <button
+                  id="facebook"
+                  className="login_buttoa1"
+                  onChange={handlechange}
+                >
                   <LiaFacebookF />
                   facebook
                 </button>
@@ -99,4 +142,5 @@ import { Link } from 'react-router-dom';
       </div>
     </section>
   );
-} export default Login
+} 
+export default Login
