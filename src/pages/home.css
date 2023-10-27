@@ -264,6 +264,13 @@
   padding-left: 28.8rem;
 }
 
+@media screen and (max-width: 1114px) {
+  .section2_a {
+    margin-left: 9.5rem;
+  }
+}
+
+
 @media screen and (max-width: 768px) {
   .section2_a {
     display: flex;
@@ -353,8 +360,3 @@
   }
 }
 
-@media screen and (max-width: 1114px) {
-  .section2_a {
-    margin-left: 9.5rem;
-  }
-}

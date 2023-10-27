@@ -1,43 +1,41 @@
-import React, { useState } from 'react';
-import './Tour.css';
-import './login_page.css';
-import {FcGoogle} from 'react-icons/fc';
-import {LiaFacebookF} from 'react-icons/lia';
+import React, { useState } from "react";
+import "./Tour.css";
+import "./login_page.css";
+import { FcGoogle } from "react-icons/fc";
+import { LiaFacebookF } from "react-icons/lia";
 
-import axios from 'axios';
+import axios from "axios";
 
- function Login() {
-  const [formData,setFormData]=useState({
+function Login() {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
 
-    email:"",
-    password:"",
-    
-  })
+  const [errors, setErrors] = useState({});
+  const handlechange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
-    const [errors, setErrors] = useState({});
-    const handlechange = (e) => {
-      const { name, value } = e.target;
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
-    };
+  const handlesubmit = async (e) => {
+    e.preventDefault();
 
-      const handlesubmit = async (e) => {
-        e.preventDefault();
-
-         console.log(formData);
-        try {
-          const res = await axios.post(
-            "https://holidayplanner.onrender.com/auth/login",
-            formData
-          );
-          window.location.href = "/dashboard";
-        } catch (error) {
-          console.log(error);
-          alert(error.response.data.message);
-        }
-      };
+    console.log(formData);
+    try {
+      const res = await axios.post(
+        "https://holidayplanner.onrender.com/auth/login",
+        formData
+      );
+      window.location.href = "/dashboard";
+    } catch (error) {
+      console.log(error);
+      alert(error.response.data.message);
+    }
+  };
 
   return (
     <section className="login_section">
@@ -105,7 +103,6 @@ import axios from 'axios';
                 value="Remember Me"
                 name="Remember Me"
                 className="contact_re"
-                
               />
               Remember Me
             </div>
@@ -142,5 +139,5 @@ import axios from 'axios';
       </div>
     </section>
   );
-} 
-export default Login
+}
+export default Login;
