@@ -94,8 +94,8 @@ function Footer() {
         <hr className="hol" />
       </div><br></br>
              <div className='endfoot'>
-      <div><h6>Copyright © 2021 Geek Code Lab. All Rights Reserved.</h6></div>
-      <div><h6>Privacy Policy |Terms of Use |Cookie Policy</h6></div></div>
+      <div ><h6>Copyright © 2021 Geek Code Lab. All Rights Reserved.</h6></div>
+      <div ><h6>Privacy Policy |Terms of Use |Cookie Policy</h6></div></div>
     </div>
   );
 }

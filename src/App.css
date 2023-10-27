@@ -356,6 +356,17 @@ width: 5rem;
 }
  } 
 
+ @media screen and (max-width: 1114px){ 
+ .section1
+{
+
+
+  margin-left: 3.8rem;
+ 
+  
+}
+}
+
    
 
  

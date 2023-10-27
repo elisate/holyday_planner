@@ -1,5 +1,5 @@
 import React from "react";
-import '../Dashboard/chat.css'
+import "../Dashboard/chat.css";
 import {
   LineChart,
   Line,
@@ -27,18 +27,17 @@ const data = [
     amt: 2210,
   },
   {
-    name: "AMOUNT",
+    name: "TOURS VISTED",
     uv: 2000,
     pv: 9800,
     amt: 2290,
   },
   {
-    name: "TOURS VISTED",
+    name: "BALANCE",
     uv: 2780,
     pv: 3908,
     amt: 2000,
   },
-  
 ];
 
 // using Customized gives you access to all relevant chart props
@@ -68,28 +67,29 @@ const CustomizedCross = (props) => {
 const Dashboardpage = () => {
   return (
     <div className="charts">
-    <ResponsiveContainer width="100%" height={500}>
-      <LineChart
-        width={500}
-        height={300}
-        data={data}
-        margin={{
-          top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Line type="monotone" dataKey="pv" stroke="#8884d8" />
-        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-        <Customized component={CustomizedCross} />
-      </LineChart>
-    </ResponsiveContainer></div>
+      <ResponsiveContainer width="100%" height={250}>
+        <LineChart
+          width={500}
+          height={250}
+          data={data}
+          margin={{
+            top: 2,
+            right: 4,
+            left: 20,
+            bottom: 2,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line type="monotone" dataKey="pv" stroke="#8884d8" />
+          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+          <Customized component={CustomizedCross} />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
   );
 };
 export default Dashboardpage;

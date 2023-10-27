@@ -1,15 +1,15 @@
 .nav1 {
-  background-color: #2B2B2B;
+  background-color: #2b2b2b;
 }
 .allpages {
-  margin-top: 12rem; /* This creates the 1rem margin at the top */
+  margin-top: 8rem; /* This creates the 1rem margin at the top */
   position: absolute; /* This allows you to position it precisely */
   top: 4rem; /* Adjust this value based on the height of your navigation bar */
 
   display: flex;
   flex-direction: row;
 
-  gap: 33rem;
+  gap: 20rem;
 }
 .pad {
   margin-top: 2rem; /* This creates the 1rem margin at the top */
@@ -18,7 +18,7 @@
   padding-left: 3.9rem;
 }
 .all {
-  background-color:#393939;
+  background-color: #393939;
   margin: 0; /* This sets the margin to zero */
   padding-left: 5rem;
   width: 34rem;
@@ -28,19 +28,15 @@
   color: white;
 
   text-decoration: none; /* This removes the underline or decoration */
-
-  
-
 }
-.all li a:hover{
-    text-decoration: line-through;
-    color: #c29d59;
-    
+.all li a:hover {
+  text-decoration: line-through;
+  color: #c29d59;
 }
-.all li a{
+.all li a {
   color: white;
   text-decoration: none;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .whites {
@@ -84,17 +80,14 @@
 }
 .holder {
   position: fixed;
-    /* border: 1px solid red; */
-  top:0;
+  /* border: 1px solid red; */
+  top: 0;
   left: 0;
   bottom: 0;
- z-index: 8888888;
- background-color: #2b2b2b;
- right: 0;
-
+  z-index: 8888888;
+  background-color: #2b2b2b;
+  right: 0;
 }
-
-
 
 /* Scroll animation */
 @keyframes scrollFromRight {
@@ -114,14 +107,28 @@
 .l4 {
   animation: scrollFromRight 0s ease 2s; /* Delay the login link's animation by 0.5s */
 }
-.holder
-{
-   animation: scrollFromRight 1s ease;
+.holder {
+  animation: scrollFromRight 1s ease;
 }
-.close_icon
-{
+.close_icon {
   margin-left: 74rem;
   width: 3rem;
   height: 3rem;
   margin-top: 7rem;
+}
+
+
+ @media screen and (max-width: 768px){
+
+
+
+.pad{
+padding-left: 1rem;
+
+}
+.us
+{
+  margin-left: 0.5rem;
+}
+  
 }

@@ -14,28 +14,23 @@ const handleEditClick = () => {
       {isEditModalOpen && <Edituser handleEditClick={handleEditClick} />}
       <table>
         <thead>
-          <tr className='tab1'>
-            <th>Profile</th>
+          <tr className="tab1">
             <th>Username</th>
             <th>Email</th>
-            <th>Password</th>
+
             <th>Edit/Delete</th>
           </tr>
         </thead>
         <tbody>
           {Userarray.map((item) => (
             <tr key={item.id}>
-              <td>
-                <img src={item.userprofile} alt="profile" className="img_A" />
-              </td>
-
               <td>{item.username}</td>
               <td>{item.email}</td>
-              <td>{item.userpassword}</td>
-              <td>
+
+              <td className="yv">
                 <button type="option" onClick={handleEditClick}>
-                  edit
-                </button>
+                  edit 
+                </button>&nbsp;&nbsp;&nbsp;
                 <button type="submit" className="A">
                   delete
                 </button>

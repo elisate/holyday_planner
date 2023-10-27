@@ -33,14 +33,15 @@ function Sidebar() {
               </a>
             </li>
             <li>
-              <ImUsers /> <a href="users">Users</a>
+              <ImUsers /> <a href="/dashboard/users">Users</a>
             </li>
             <li>
               <FaLocationDot /> <a href="/">Place </a>
             </li>
             <li>
-              <BiSolidPlaneAlt /><a href="tours">Tour</a>
-       </li>
+              <BiSolidPlaneAlt />
+              <a href="/dashboard/tours">Tour</a>
+            </li>
 
             <li className="list_dash">
               <MdExpandMore />

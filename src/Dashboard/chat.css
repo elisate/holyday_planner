@@ -1,10 +1,12 @@
 .charts
 {
 
-  margin-left: 11rem;
-    margin-top: 2rem;
+  margin-left: 13rem;
+    margin-top: 8rem;
     color: black;
-    width: 60rem;
-    height: 25rem;
+    width: 50rem;
+    height: 20rem;
+ box-shadow: 0 0 5px rgb(147, 144, 144);
+ padding-top: 2.5rem;
     
     }

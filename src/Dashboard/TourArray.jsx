@@ -5,19 +5,58 @@ import { Appcontext } from "../context/Contextprovider";
 import { mycontext } from "../context/Contextprovider";
 import Toursform from "./Toursform";
 import AddFormtours from "./AddFormtours";
+import Notiflix from "notiflix";
+import axios from "axios";
 
-function TourArray () {
+function TourArray() {
   const { listcard } = mycontext();
 
-const [isEditModalOpen, setEditModalOpen] = useState(false);
-const handleEditClick = () => {
-  setEditModalOpen((previsEditModal) => !previsEditModal);
-};
-const [isCreate, setCreate] = useState(false);
-const handleCreateClick = () => {
-  setCreate((previsEditModal) => !previsEditModal);
-};
+  const [isEditModalOpen, setEditModalOpen] = useState(false);
+  const handleEditClick = () => {
+    setEditModalOpen((previsEditModal) => !previsEditModal);
+  };
+  const [isCreate, setCreate] = useState(false);
+  const handleCreateClick = () => {
+    setCreate((previsEditModal) => !previsEditModal);
+  };
 
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [tourToDelete, setTourToDelete] = useState(null);
+  const handleConfirmDelete = async (id) => {
+    try {
+      Notiflix.Confirm.show(
+        "Confirm delete tour",
+        "Do you agree with me?",
+        "Yes",
+        "No",
+        async () => {
+          const res = await axios.delete(
+            `https://holiday-planner-4lnj.onrender.com/api/v1/tour/delete/${id}`,
+            {
+              headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+              },
+            }
+          );
+          window.location.reload();
+        },
+        () => {
+          alert("If you say so...");
+        },
+        {}
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleDeleteClick = (tours) => {
+    setTourToDelete(tours);
+    handleConfirmDelete();
+    // setShowDeleteConfirm(true);
+  };
+  const handleCancelDelete = () => {
+    setShowDeleteConfirm(false);
+  };
 
   return (
     <div className="dash_array_tour">
@@ -64,16 +103,28 @@ const handleCreateClick = () => {
                 </button>
               </td>
               <td>
-                <button type="cancel" className="A">
+                <button
+                  type="cancel"
+                  className="A"
+                  onClick={() => handleConfirmDelete(item._id)}
+                >
                   delete
                 </button>
               </td>
             </tr>
           ))}
+
+          {showDeleteConfirm && (
+            <div className="popup">
+              <p>Are you sure you want to delete {tourToDelete._id}?</p>
+              <button onClick={handleConfirmDelete}>OK</button>
+              <button onClick={handleCancelDelete}>Cancel</button>
+            </div>
+          )}
         </tbody>
       </table>
     </div>
   );
-};
+}
 
 export default TourArray;

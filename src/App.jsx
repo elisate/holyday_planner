@@ -52,14 +52,15 @@ function App() {
           <Route path="/Signup_page" element={<Register />} />
           <Route path="/login_page" element={<Login />} />
           <Route path="/Register_page" element={<Register />} />
-          <Route path="/dashboard" element={<Dashboard />}>
-            <Route index element={<outlet />} />
-            <Route path="/dashboard/users" element={<Users />} />
-            <Route path="users" element={<Users />} />
-            <Route path="dashboard_page" element={<Dashboardpage />} />
-            <Route path="tours" element={<TourArray />} />
-            <Route path="log_to_out" element={<Login/>} />
           
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route index element={<Dashboardpage />} />
+            <Route path="dashboard_page" element={<Dashboardpage />} />
+             <Route path="dashboard/users" element={<Users />} /> 
+            <Route path="users" element={<Users />} />
+
+            <Route path="tours" element={<TourArray />} />
+            <Route path="log_to_out" element={<Login />} />
           </Route>
         </Routes>
       </BrowserRouter>

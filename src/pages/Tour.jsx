@@ -4,10 +4,14 @@ import Cardlist from "./Cardlist";
 import { Link } from "react-router-dom";
 import fetching from "../API/fetching";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { mycontext } from "../context/Contextprovider";
 function Tour() {
   const { listcard } = mycontext();
-
+const navigatee = useNavigate();
+const handleNavigatee = (id) => {
+  navigatee(`/Tour_page/${id}`);
+};
   return (
     <section className="second">
       <div className="background_image">
@@ -83,10 +87,13 @@ function Tour() {
                       </h3>
                     </div>
                     <div>
-                      <button type="submit" className="tourbutto">
-                        <Link to={`/Tour_page/${item.id}`}>
+                      <button type="submit" className="tourbutto"
+                      
+                      onClick={() =>handleNavigatee(item?._id)}
+                      >
+                      
                           <b>BOOK</b>
-                        </Link>
+                      
                       </button>
                     </div>
                   </div>

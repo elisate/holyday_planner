@@ -3,7 +3,7 @@ import "./Toursform.CSS";
 import TourArray from "./TourArray";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-
+import { Notify } from "notiflix";
 
 function AddFormtours() {
   const onSubmit = async (tour) => {
@@ -28,9 +28,13 @@ function AddFormtours() {
           },
         }
       );
+      Notify.success("Tour created successfuly");
       if (res.data) {
         console.log("Tour created", res.data);
       }
+      setTimeout(() => {
+        window.location.reload();
+      }, 3000);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -40,9 +44,9 @@ function AddFormtours() {
     handleSubmit,
     formState: { errors },
   } = useForm();
- 
+
   return (
-    <div>
+    <div className="overall">
       <div className="tourform">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="form-groupT">

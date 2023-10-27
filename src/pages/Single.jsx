@@ -1,27 +1,50 @@
-  import "./Single.css";
+import "./Single.css";
 import { useParams } from "react-router-dom";
 import Cardlist from "./Cardlist";
+import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
+
 const Single = () => {
   const { Tid } = useParams();
-  const tour = Cardlist.find((tour) => tour.id === Tid);
-  const {
-    id,
-    image,
-    country,
-    desc1,
-    desc2,
-    status,
-    duration1,
-    duration2,
-    groupsize1,
-    groupsize2,
-    amount,
-  } = tour;
- 
+  console.log(Tid);
+  const [tourr, setTourr] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await axios.get(
+          `https://holiday-planner-4lnj.onrender.com/api/v1/tour/getElement?fieldName=_id&value=${Tid}`
+        );
+        const data = response.data;
+        setTourr(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+    fetchData(); // Immediately invoke the async function
+    // You don't need to return anything from useEffect
+  }, [Tid]); // Include id in the dependency array to re-run the effect when id changes
+  console.log("=======================", tourr);
+
+  // const tour = Cardlist.find((tour) => tour.id === Tid);
+  // const {
+  //   id,
+  //   image,
+  //   country,
+  //   desc1,
+  //   desc2,
+  //   status,
+  //   duration1,
+  //   duration2,
+  //   groupsize1,
+  //   groupsize2,
+  //   amount,
+  // } = tour;
+
   return (
     <section className="im">
       <div>
-        <img src={image} className="background-imagee" />
+        <img src={tourr.backdropImage} className="background-imagee" style={{width: "100%", height: "100%"}} />
       </div>
       <div className="section-tourdetails">
         <div className="detail-information">
@@ -81,7 +104,6 @@ const Single = () => {
         </div>
 
         <div className="tour-detailed">
-        
           <div className="para23">
             <div className="circle">
               <p>$12000</p>
@@ -89,11 +111,23 @@ const Single = () => {
             </div>
           </div>
           <div className="planned-trip">
-           <div><p class="trip-duration">2 days</p></div> 
-         <div>  <p class="trip-duration">6 People</p></div> 
-          <div> <p class="trip-participants">18 </p></div> 
-           <div><p class="trip-destination">Greece</p></div>
-          <div><p class="trip-destination"> Discovery</p></div>  
+            <div>
+              <p class="trip-duration">2 days</p>
+            </div>
+            <div>
+              {" "}
+              <p class="trip-duration">6 People</p>
+            </div>
+            <div>
+              {" "}
+              <p class="trip-participants">18 </p>
+            </div>
+            <div>
+              <p class="trip-destination">Greece</p>
+            </div>
+            <div>
+              <p class="trip-destination"> Discovery</p>
+            </div>
           </div>
           <div className="trip-description">
             <p>
@@ -140,7 +174,6 @@ const Single = () => {
               </tbody>
             </table>
           </div>
-          
         </div>
       </div>
     </section>
