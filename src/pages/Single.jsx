@@ -43,7 +43,7 @@ const Single = () => {
 
   return (
     <section className="im">
-      <div>
+      <div className="srespo">
         <img src={tourr.backdropImage} className="background-imagee" style={{width: "100%", height: "100%"}} />
       </div>
       <div className="section-tourdetails">

@@ -14,6 +14,7 @@ import Users from "./Dashboard/Users";
 import Dashboardpage from "./Dashboard/Dashboardpage";
 import TourArray from "./Dashboard/TourArray";
 import Single from "./pages/Single";
+import Use from "./Dashboard/Use";
 
 import { Appcontext } from "./context/Contextprovider";
 
@@ -56,8 +57,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<Dashboardpage />} />
             <Route path="dashboard_page" element={<Dashboardpage />} />
-             <Route path="dashboard/users" element={<Users />} /> 
-            <Route path="users" element={<Users />} />
+             <Route path="dashboard/users" element={<Users/>} /> 
+             <Route path="users" element={<Use />} /> 
 
             <Route path="tours" element={<TourArray />} />
             <Route path="log_to_out" element={<Login />} />

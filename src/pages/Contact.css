@@ -1,10 +1,11 @@
 .contact_back{
-  background-image: url('contactimage1.jpg'); /* Replace with the actual image path */
+  background-image: url('conta3.webp'); /* Replace with the actual image path */
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
-  height: 35rem; /* Set a fixed height for the background image */
+
+  height: 35rem; 
   z-index: 8888;
+
   /* width: 1262px; */
 }
 .contact1

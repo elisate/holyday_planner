@@ -43,17 +43,19 @@ function Login() {
         <form className="LOGINF" onSubmit={handlesubmit}>
           <div className="loggin">
             <div>
-              <div>
-                <b>LOGIN</b>
-              </div>
-              <div>
-                <p className="remove">
-                  Does Not Have An Account Yet &nbsp;
-                  <a href="Signup_page" className="alog">
-                    Sign Up
-                  </a>
-                </p>
-              </div>
+              <div className="fl">
+                <div>
+                  <b className="fl2">LOGIN FORM</b>
+                </div>
+                <div>
+                  <p className="remove">
+                    Does Not Have An Account Yet &nbsp;
+                    <a href="Signup_page" className="alog">
+                      Sign Up
+                    </a>
+                  </p>
+                </div>
+              </div><br></br>
               <div className="solve2">
                 <p className="remove">
                   <b>Email Address</b>
@@ -75,11 +77,7 @@ function Login() {
                 <div className="remove">
                   <b>Password</b>
                 </div>
-                <div>
-                  <a href="/" className="remove">
-                    Forget Password
-                  </a>
-                </div>
+               
               </div>
 
               <div>
@@ -108,7 +106,7 @@ function Login() {
             </div>
 
             <div className="login_butto1">
-              <button type="submit" className="login_button">
+              <button type="submit" className="login_buttonn">
                 LOGIN
               </button>
             </div>

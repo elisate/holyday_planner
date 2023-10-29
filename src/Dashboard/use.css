@@ -1,0 +1,12 @@
+.use1 {
+  padding-left: 13rem;
+  height: fit-content;
+  background-color: white;
+  padding-top: 2rem;
+}
+.edituser1 {
+  color: black;
+}
+.deleteuser1 {
+  color: red;
+}
