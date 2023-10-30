@@ -15,8 +15,10 @@ function Use() {
 const [SiteUser, SetSiteUser] = useState([]);
  const FecthData= async () => {
     try{
-        const {data} = await axios.get(`https://holidayplanner.onrender.com/auth`);
+        const {data} = await axios.get(`https://holidayplanner.onrender.com/auth`
 
+        );
+          
    if (data) {
           console.log(data.data);
           SetSiteUser(data.data);
@@ -71,7 +73,7 @@ const [SiteUser, SetSiteUser] = useState([]);
   return (
     <div className="use1">
       {isEditModalOpen && <Edituser handleEditClick={handleEditClick} />}
-      <table>
+      <table className='usetable'>
         <thead>
           <tr className="tab1">
             <th>FullNames</th>
@@ -84,7 +86,7 @@ const [SiteUser, SetSiteUser] = useState([]);
         </thead>
         <tbody>
           {SiteUser.map((item) => (
-            <tr>
+            <tr className='tab2'>
               <td>{item.FullNames}</td>
               <td>{item.email}</td>
               <td>{item.phoneNumber}</td>

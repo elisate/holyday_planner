@@ -56,7 +56,8 @@
   .form-group input {
     width: 100%;
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid black;
+    border-radius: 2px;
   }
   
   .edit-footer {
@@ -78,3 +79,15 @@
   .edit-cancel {
     background: #A52A2A;
   }
+  .collect
+  {
+    background-color: white;
+      border: solid 5px black;
+  }
+  .pe
+  {
+    background-color: white;
+    border: solid 5px black;
+  }
+  
+  

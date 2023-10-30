@@ -16,22 +16,27 @@ function Edituser({ user, onClose, onSave, handleEditClick }) {
         </div>
         <div className="edit-body">
           <form>
-          
             <div className="form-group">
               <label for="profilePicture">profile picture:</label>
-  <input type="file" id="profilePicture" name="profilePicture" className="pe"/>
+              <input
+                type="file"
+                id="profilePicture"
+                name="profilePicture"
+                className="pe"
+              
+              />
 
               <label>Username:</label>
-              <input type="text" />
+              <input type="text" className="collect" />
             </div>
             <div className="form-group">
               <label>Email:</label>
-              <input type="email" />
+              <input type="email" className="collect" />
             </div>
-            
+
             <div className="form-group">
               <label>Password:</label>
-              <input type="Password" />
+              <input type="Password" className="collect" />
             </div>
           </form>
         </div>

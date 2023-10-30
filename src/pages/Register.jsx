@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 // import fectching from "../API/fetching";
 import axios from "axios";
 function Register() {
-  const [users, setUsers] = useState([]);
+ 
 
   //  try {
   //    const response = await fectching

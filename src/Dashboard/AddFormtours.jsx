@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { Notify } from "notiflix";
 
-function AddFormtours() {
+function AddFormtours({ handleCreateClick }) {
   const onSubmit = async (tour) => {
     const formData = new FormData();
     formData.append("destination", tour.destination);
@@ -46,70 +46,80 @@ function AddFormtours() {
   } = useForm();
 
   return (
-    <div className="overall">
-      <div className="tourform">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="form-groupT">
-            <label for="garrely">gallery:</label>
-            <input
-              type="file"
-              name="gallery"
-              accept="image/*"
-              {...register("gallery", { required: true })}
-            />
-          </div>
-          <div className="form-groupT">
-            <label for="Image">Image:</label>
-            <input
-              type="file"
-              name="image"
-              accept="image/*"
-              {...register("image", { required: true })}
-            />
-          </div>
+    <div className="addover">
+      <div className="overall">
+        <div className="tourform">
+          
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="form-groupT">
+              <label for="garrely">gallery:</label>
+              <input
+                type="file"
+                name="gallery"
+                accept="image/*"
+                {...register("gallery", { required: true })}
+              />
+            </div>
+            <div className="form-groupT">
+              <label for="Image">Image:</label>
+              <input
+                type="file"
+                name="image"
+                accept="image/*"
+                {...register("image", { required: true })}
+              />
+            </div>
 
-          <div className="form-groupT">
-            <label>Country:</label>
-            <input
-              type="text"
-              name="title"
-              {...register("title", { required: true })}
-            />
-          </div>
+            <div className="form-groupT">
+              <label>Country:</label>
+              <input
+                type="text"
+                name="title"
+                {...register("title", { required: true })}
+              />
+            </div>
 
-          <div className="form-groupT">
-            <label>Description:</label>
-            <input
-              type="text"
-              name="description"
-              {...register("description", { required: true })}
-            />
-          </div>
+            <div className="form-groupT">
+              <label>Description:</label>
+              <input
+                type="text"
+                name="description"
+                {...register("description", { required: true })}
+              />
+            </div>
 
-          <div className="form-groupT">
-            <label>Group Size:</label>
-            <input
-              type="number"
-              name="groupsize"
-              {...register("groupsize", { required: true })}
-            />
-          </div>
+            <div className="form-groupT">
+              <label>Groupsize:</label>
+              <input
+                type="number"
+                name="price"
+                {...register("groupsize", { required: true })}
+              />
+            </div>
 
-          <div className="form-groupT">
-            <label>Duration:</label>
-            <input
-              type="text"
-              name="duration"
-              {...register("duration", { required: true })}
-            />
-          </div>
+            <div className="form-groupT">
+              <label>Duration:</label>
+              <input
+                type="text"
+                name="duration"
+                {...register("duration", { required: true })}
+              />
+            </div>
 
-          <div className="edit-footerT">
-            <button type="submit" className="edit-button edit-save">
-              Create
-            </button>
-          </div>
-        </form>
+            <div className="edit-footerT">
+              <button type="submit" className="edit-button edit-save">
+                Create
+              </button>
+              <button
+                type="option"
+                className="edit-button edit-save"
+                onClick={handleCreateClick}
+              >
+                cancel
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );

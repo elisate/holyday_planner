@@ -12,11 +12,14 @@ function TourArray() {
   const { listcard } = mycontext();
 
   const [isEditModalOpen, setEditModalOpen] = useState(false);
-  const handleEditClick = () => {
+  const[editedTour,setEditedTour]=useState(null)
+  const handleEditClick = (item) => {
+     setEditedTour(item);
     setEditModalOpen((previsEditModal) => !previsEditModal);
   };
   const [isCreate, setCreate] = useState(false);
   const handleCreateClick = () => {
+   
     setCreate((previsEditModal) => !previsEditModal);
   };
 
@@ -61,7 +64,7 @@ function TourArray() {
   return (
     <div className="dash_array_tour">
       {isCreate && <AddFormtours handleCreateClick={handleCreateClick} />}
-      {isEditModalOpen && <Toursform handleEditClick={handleEditClick} />}
+      {isEditModalOpen && <Toursform handleEditClick={handleEditClick} item={editedTour} />}
 
       <div className="add">
         <button type="option" onClick={handleCreateClick}>
@@ -75,7 +78,7 @@ function TourArray() {
             <th>Image</th>
             <th>Country</th>
             <th>Description</th>
-            <th>Group size</th>
+            <th>GroupSize</th>
             <th>Duration</th>
             <th>Edit</th>
             <th>Delete</th>
@@ -83,7 +86,7 @@ function TourArray() {
         </thead>
         <tbody>
           {listcard.map((item) => (
-            <tr>
+            <tr key={item._id}>
               <td className="gl">{item.Gallery}</td>
               <td>
                 <img
@@ -94,11 +97,11 @@ function TourArray() {
               </td>
 
               <td>{item.Title}</td>
-              <td>{item.destination}</td>
-              <td>{item.GroupSize}</td>
-              <td>{item.fromMonth}</td>
+              <td>{item.Description}</td>
+               <td>{item.GroupSize}</td> 
+              <td>{item.Duration}</td>
               <td>
-                <button type="option" onClick={handleEditClick}>
+                <button type="option" onClick={()=>handleEditClick(item)}>
                   Edit
                 </button>
               </td>

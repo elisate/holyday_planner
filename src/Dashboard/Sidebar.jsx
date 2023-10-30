@@ -10,6 +10,7 @@ import { BsFillCircleFill } from "react-icons/bs";
 import { MdExpandMore } from "react-icons/md";
 import { AiOutlineLogout } from "react-icons/ai";
 import {ImUsers} from "react-icons/im";
+import {BsMessenger} from "react-icons/bs"
 import "./Sidebar.css";
 
 function Sidebar() {
@@ -41,6 +42,12 @@ function Sidebar() {
             <li>
               <BiSolidPlaneAlt />
               <a href="/dashboard/tours">Tour</a>
+            </li>
+            <li>
+              <BsMessenger />{" "}
+              <a href="" className="list_dash">
+                Message
+              </a>
             </li>
 
             <li className="list_dash">

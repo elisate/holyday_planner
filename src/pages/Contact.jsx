@@ -1,6 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Contact.css';
+import axios from 'axios';
+
 export default function Contact() {
+const [formData, setFormData] = useState({
+  useremail: "",
+  message: "",
+  
+});
+
+const [errors, setErrors] = useState({});
+const handlechange = (e) => {
+  const { name, value } = e.target;
+  setFormData({
+    ...formData,
+    [name]: value,
+  });
+};
+
+const handlesubmit = async (e) => {
+  e.preventDefault();
+
+  console.log(formData);
+  try {
+    const res = await axios.post(
+      "https://holidayplanner.onrender.com/contact",
+      formData
+    );
+    // window.location.href = "/login_page";
+  } catch (error) {
+    console.log(error);
+    alert(error.response.data.message);
+  }
+};
+
+
+  
   return (
     <div className="CONTACT">
       <section className="contact_back">
@@ -10,53 +45,62 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      <div className="contact2_holder">
+      <div className="contact2_holder"><form>
         <div className="contact2">
-          <div className="contact2a">
-            <div>
-              <input
-                type="text"
-                placeholder="Full Name*"
-                className="contact2_text1"
-              />
+          
+            <div className="contact2a">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Full Name*"
+                  className="contact2_text1"
+                  onChange={handlechange}
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Email*"
+                  className="contact2_text1"
+                  onChange={handlechange}
+                  name="useremail"
+                />
+              </div>
+            </div>
+            <div className="contact2b">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Phone*"
+                  className="contact2_text1"
+                  onChange={handlechange}
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Services*"
+                  className="contact2_text1"
+                  onChange={handlechange}
+                />
+              </div>
             </div>
             <div>
               <input
                 type="text"
-                placeholder="Email*"
-                className="contact2_text1"
-              />
-            </div>
-          </div>
-          <div className="contact2b">
-            <div>
-              <input
-                type="text"
-                placeholder="Phone*"
-                className="contact2_text1"
+                placeholder="Message"
+                className="contact2_text2"
+                onChange={handlechange}
+                name="message"
               />
             </div>
             <div>
-              <input
-                type="text"
-                placeholder="Services*"
-                className="contact2_text1"
-              />
+              <button title="submit" className="BUTTO">
+                SUBMIT
+              </button>
             </div>
-          </div>
-          <div>
-            <input
-              type="text"
-              placeholder="Message"
-              className="contact2_text2"
-            />
-          </div>
-          <div>
-            <button title="submit" className="BUTTO">
-              SUBMIT
-            </button>
-          </div>
-        </div>
+          
+        </div></form>
       </div>
 
       <div>
@@ -100,8 +144,12 @@ export default function Contact() {
           </div>
           <div>
             <p>
-              <button type="submit" className="contact_butto"></button>54,
-              Beside Shoping Mall, Gujarat.
+              <button
+                type="submit"
+                className="contact_butto"
+                onChange={handlechange}
+              ></button>
+              54, Beside Shoping Mall, Gujarat.
             </p>
           </div>
           <div>
@@ -126,8 +174,8 @@ export default function Contact() {
 
         </div> */}
       </div>
-      <section className='contact_map'>
-        <div className='contact_map'>
+      <section className="contact_map">
+        <div className="contact_map">
           <iframe
             title="Google Map"
             width="700"
