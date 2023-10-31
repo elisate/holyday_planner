@@ -4,8 +4,11 @@ import axios from 'axios';
 
 export default function Contact() {
 const [formData, setFormData] = useState({
-  useremail: "",
-  message: "",
+  userId:"d12",
+  useremail: "usercont@gmail.com",
+  message: "wwwww",
+
+  
   
 });
 
@@ -45,15 +48,16 @@ const handlesubmit = async (e) => {
           </div>
         </div>
       </section>
-      <div className="contact2_holder"><form>
-        <div className="contact2">
-          
+      <div className="contact2_holder">
+        <form onSubmit={handlesubmit}>
+          <div className="contact2">
             <div className="contact2a">
               <div>
                 <input
                   type="text"
                   placeholder="Full Name*"
                   className="contact2_text1"
+                  name='fullname'
                   onChange={handlechange}
                 />
               </div>
@@ -74,6 +78,7 @@ const handlesubmit = async (e) => {
                   placeholder="Phone*"
                   className="contact2_text1"
                   onChange={handlechange}
+                  name='userId'
                 />
               </div>
               <div>
@@ -82,6 +87,7 @@ const handlesubmit = async (e) => {
                   placeholder="Services*"
                   className="contact2_text1"
                   onChange={handlechange}
+                  name='services'
                 />
               </div>
             </div>
@@ -99,8 +105,8 @@ const handlesubmit = async (e) => {
                 SUBMIT
               </button>
             </div>
-          
-        </div></form>
+          </div>
+        </form>
       </div>
 
       <div>
@@ -165,14 +171,6 @@ const handlesubmit = async (e) => {
             </p>
           </div>
         </div>
-
-        {/* <div className="conmtact_elsa">
-          <div> <div></div>888 S Greenville, TX 75081, United States.
-
-
-          </div>
-
-        </div> */}
       </div>
       <section className="contact_map">
         <div className="contact_map">

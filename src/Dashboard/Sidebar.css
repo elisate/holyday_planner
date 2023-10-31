@@ -8,7 +8,7 @@
   height: 60px; /* Adjust the size as needed */
   border-radius: 50%; /* Makes it a circle */
   object-fit: cover; /* Ensures the image covers the entire circle */
-  border: solid 1px mediumvioletred;
+  border: solid 1.9px #C29D59;
 }
 .dushboard_header1 {
   background-color: white; /* bg color change*/
@@ -57,14 +57,14 @@
 }
 
 .list_dash {
-  color: rgb(215, 43, 152);
+  color: #C29D59;
 }
 .logout {
   padding-top: 4rem;
   
 }
 .dom_dash {
-  color: rgb(215, 43, 152);
+  color: #C29D59;
 }
 .dom_dash1 {
   color: blue;
@@ -77,3 +77,4 @@
   color: black;
   padding-top: 3rem;
 }
+

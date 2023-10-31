@@ -11,12 +11,15 @@ import Tour from "./pages/Tour.jsx";
 import Register from "./pages/Register";
 import Dashboard from "./Dashboard/Dashboard";
 import Users from "./Dashboard/Users";
-import Dashboardpage from "./Dashboard/Dashboardpage";
+
 import TourArray from "./Dashboard/TourArray";
 import Single from "./pages/Single";
 import Use from "./Dashboard/Use";
-
+import Contactapi from "./Dashboard/Contactapi";
 import { Appcontext } from "./context/Contextprovider";
+import Place from "./Dashboard/Place";
+import Alldashboard from "./Dashboard/Alldashboard";
+import Card1dashb from "./Dashboard/Card1dashb";
 
 
 const Layout = () => {
@@ -53,15 +56,16 @@ function App() {
           <Route path="/Signup_page" element={<Register />} />
           <Route path="/login_page" element={<Login />} />
           <Route path="/Register_page" element={<Register />} />
-          
-          <Route path="/dashboard" element={<Dashboard />}>
-            <Route index element={<Dashboardpage />} />
-            <Route path="dashboard_page" element={<Dashboardpage />} />
-             <Route path="dashboard/users" element={<Users/>} /> 
-             <Route path="users" element={<Use />} /> 
 
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route index element={<Alldashboard />} />
+            <Route path="/dashboard/dashboard_page" element={<Alldashboard />} />
+            <Route path="dashboard/users" element={<Users />} />
+            <Route path="users" element={<Use />} />
+            <Route path="messa" element={<Contactapi />} />
             <Route path="tours" element={<TourArray />} />
             <Route path="log_to_out" element={<Login />} />
+            <Route path="placee" element={<Place />} />
           </Route>
         </Routes>
       </BrowserRouter>

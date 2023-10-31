@@ -30,7 +30,17 @@ function Login() {
         "https://holidayplanner.onrender.com/auth/login",
         formData
       );
-      window.location.href = "/dashboard";
+
+      console.log(res.data);
+      localStorage.setItem("userData", JSON.stringify(res.data));
+
+      // JSON.parse(localStorage.getItem("userData"))?.user.fu
+
+      if (res.data.user.role === "admin") {
+        window.location.href = "/dashboard";
+      } else {
+        window.location.href = "/homepage";
+      }
     } catch (error) {
       console.log(error);
       alert(error.response.data.message);
@@ -55,7 +65,8 @@ function Login() {
                     </a>
                   </p>
                 </div>
-              </div><br></br>
+              </div>
+              <br></br>
               <div className="solve2">
                 <p className="remove">
                   <b>Email Address</b>
@@ -77,7 +88,6 @@ function Login() {
                 <div className="remove">
                   <b>Password</b>
                 </div>
-               
               </div>
 
               <div>

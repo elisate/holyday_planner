@@ -28,7 +28,7 @@ function Sidebar() {
         <div className="sidebar_subholder">
           <ul>
             <li className="list_dash">
-              <BiSolidDashboard />
+              <BiSolidDashboard className="Do" />
               <a href="dashboard_page" className="list_dash">
                 Dashboard
               </a>
@@ -37,7 +37,7 @@ function Sidebar() {
               <ImUsers /> <a href="/dashboard/users">Users</a>
             </li>
             <li>
-              <FaLocationDot /> <a href="/">Place </a>
+              <FaLocationDot /> <a href="placee">Place </a>
             </li>
             <li>
               <BiSolidPlaneAlt />
@@ -45,7 +45,7 @@ function Sidebar() {
             </li>
             <li>
               <BsMessenger />{" "}
-              <a href="" className="list_dash">
+              <a href="/dashboard/messa" className="list_dash">
                 Message
               </a>
             </li>

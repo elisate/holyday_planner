@@ -1,35 +1,35 @@
-import React, { useState } from 'react'
-import './Toursform.css'
-import axios from 'axios';
-function Toursform({  handleEditClick,item }) {
+import React, { useState } from "react";
+import "./Toursform.css";
+import axios from "axios";
+function Toursform({ handleEditClick, item }) {
+  const [title, setTitle] = useState(item.Title);
+  const [description, setDescription] = useState(item.Description);
+  const [groupsize, setGroupSize] = useState(item.GroupSize);
 
-      const [title, setTitle] = useState(item.Title);
-      const[description,setDescription]=useState(item.Description)
-       const [groupsize, setGroupSize] = useState(item.GroupSize);
+  const [duration, setDuration] = useState(item.Duration);
 
-const [duration, setDuration] = useState(item.Duration);
+  function handleUpdate(e) {
+    e.preventDefault();
 
-function handleUpdate(e){
-e.preventDefault()
-
-const Formdata = {
-  Title:title,
-  Description:description,
-  GroupSize: groupsize,
-  Duration:duration,
-}
-axios
-  .put(`https://holiday-planner-4lnj.onrender.com/api/v1/tour/update/${item._id}`, Formdata)
-  .then(({ response }) => {
-    alert("tour updated");
-    window.location.reload()
-  })
-  .catch((error) => {
-    alert(error);
-  });
-}
-      
-           
+    const Formdata = {
+      Title: title,
+      Description: description,
+      GroupSize: groupsize,
+      Duration: duration,
+    };
+    axios
+      .put(
+        `https://holiday-planner-4lnj.onrender.com/api/v1/tour/update/${item._id}`,
+        Formdata
+      )
+      .then(({ response }) => {
+        alert("tour updated");
+        window.location.reload();
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  }
 
   return (
     <div>
@@ -94,4 +94,4 @@ axios
   );
 }
 
-export default Toursform
+export default Toursform;
