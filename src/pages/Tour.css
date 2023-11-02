@@ -209,7 +209,7 @@ font-size:0.6rem;
 
 
 .tourD_holder{
-  margin-top:rem;
+
   
   background-color: white;
   height: 20rem;
@@ -227,6 +227,7 @@ font-size:0.6rem;
 {
   margin-left: 50rem;
   margin-top: -7rem;
+  height: 100rem;
 }
 .tour_d{
   border-left: solid #C29D59;
@@ -239,8 +240,9 @@ font-size:0.6rem;
   display: flex;
   flex-direction:column;
   margin-left: -2rem;
-  
-}
+  height: fit-content;
+ background-color: white;
+} 
 
 .holder_numbertour
 {
@@ -304,7 +306,7 @@ background-color: white;
 .texd2 input[type="checkbox"] {
      background-color: white;
     border: initial;
-    /* You can add additional styling here if needed */
+ 
 }
 
 .tourC_holder{
@@ -452,13 +454,17 @@ color: gray;
 
 .JUST_hold
 {
- display: grid;
- grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+ /* display: grid; */
+ /* grid-template-columns: repeat(auto-fill, minmax(45%, 1fr)); */
 
- width: 50%;
- margin-left:8rem;
- margin-top: -65rem;
- gap: 3rem;
+ /* width: 50%;*/
+ margin-left:8rem; 
+
+ height: fit-content;
+margin-top:-92rem;
+display: flex;
+flex-direction: column;
+gap:1rem;
 
  
 }
@@ -514,12 +520,13 @@ color: black;
 }
 .JUST_hold
 {
-  display: flex;
-  flex-direction: column;
-  gap:2rem;
+display: flex;
+flex-direction: column;
+gap:2rem;
  margin-left: 4.7rem;
  margin-bottom: 2rem;
  height: fit-content;
+ padding-top: 70rem;
 
 }
 
@@ -564,11 +571,9 @@ color: black;
 
 .tour-text
 {
- 
- 
 
-  margin-top: 25rem;
-   margin-left: 3rem;
+  margin-top: 50rem;
+  margin-left: 3rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -576,6 +581,14 @@ color: black;
   border-bottom: solid 2px rgb(159, 154, 154);
   height: 10rem;
   width: 15rem;
+
+}
+.collecty
+{
+  margin-left: 2rem;
+  margin-top: 1rem;
+ 
+ 
 
 }
     

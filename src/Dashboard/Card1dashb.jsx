@@ -5,31 +5,34 @@ import { useEffect } from 'react';
 import { BiSolidPlaneAlt } from "react-icons/bi";
 import { ImUsers } from "react-icons/im";
 import { PiAddressBook } from "react-icons/pi";
-import { useContext } from 'react';
+
 import { mycontext } from '../context/Contextprovider';
-import Use from './Use';
-import axios from 'axios';
+
+
+
 function Card1dashb() {
 const { listcard } = mycontext();
-const [SiteUser, SetSiteUser] = useState([]);
-const FecthData = async () => {
-  try {
-    const { data } = await axios.get(
-      `https://holidayplanner.onrender.com/auth`
-    );
+const { siteuser } = mycontext();
 
-    if (data) {
-      console.log(data.data);
-      SetSiteUser(data.data);
-    }
-  } catch (error) {
-    console.log({ error });
-  }
-};
+// const [SiteUser, SetSiteUser] = useState([]);
+// const FecthData = async () => {
+//   try {
+//     const { data } = await axios.get(
+//       `https://holidayplanner.onrender.com/auth`
+//     );
 
-useEffect(() => {
-  FecthData();
-}, []);
+//     if (data) {
+//       console.log(data.data);
+//       SetSiteUser(data.data);
+//     }
+//   } catch (error) {
+//     console.log({ error });
+//   }
+// };
+
+// useEffect(() => {
+//   FecthData();
+// }, []);
   return (
     <>
       <div className="allcard1">
@@ -41,7 +44,7 @@ useEffect(() => {
             <div className="toptext">
               <ul className="kardlist">
                 <li className="lmoney">{listcard.length}</li>
-                <li> {listcard.length} Card Available</li>
+                <li> {listcard.length} Tours Available</li>
               </ul>
             </div>
           </div>
@@ -71,8 +74,8 @@ useEffect(() => {
           </div>
           <div className="toptext">
             <ul className="kardlist">
-              <li className="lmoney">{SiteUser.length}</li>
-              <li> {SiteUser.length} Users Available </li>
+              <li className="lmoney">{siteuser.length}</li>
+              <li> {siteuser.length} Users Available </li>
             </ul>
           </div>
           <div className="CD1">

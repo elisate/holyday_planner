@@ -26,20 +26,46 @@ const Single = () => {
   }, [Tid]); // Include id in the dependency array to re-run the effect when id changes
   console.log("=======================", tourr);
 
-  // const tour = Cardlist.find((tour) => tour.id === Tid);
-  // const {
-  //   id,
-  //   image,
-  //   country,
-  //   desc1,
-  //   desc2,
-  //   status,
-  //   duration1,
-  //   duration2,
-  //   groupsize1,
-  //   groupsize2,
-  //   amount,
-  // } = tour;
+ 
+ const [formData, setFormData] = useState({
+   paymentMethod: "",
+   tourID: "",
+   date: "",
+   
+ });
+
+ const [errors, setErrors] = useState({});
+ const handlechange = (e) => {
+   const { name, value } = e.target;
+   setFormData({
+     ...formData,
+     [name]: value,
+   });
+ };
+ const handlesubmit = async (e) => {
+   e.preventDefault();
+
+   // if (!formData.password.trim()) {
+   //   validationErrors.password = " ! please password required";
+   // } else if (formData.password.length < 6) {
+   //   validationErrors.password = " ! pin should greater than 6 char";
+   // }
+
+   console.log(formData);
+   try {
+     const res = await axios.post(
+       "https://holidayplanner.onrender.com/auth/signup",
+       formData
+     );
+     window.location.href = "/login_page";
+   } catch (error) {
+     console.log(error);
+     alert(error.response.data.message);
+   }
+ };
+
+
+
 
   return (
     <section className="im">
@@ -58,7 +84,7 @@ const Single = () => {
             <div className="div1">Review</div>
           </div>
         </div>
-
+<form>
         <div className="side-form1">
           <h6 className="title-2">BOOK THIS TOUR</h6>
           <div class="search-tour1">
@@ -102,6 +128,7 @@ const Single = () => {
             <button className="sasa">BOOK NOW</button>
           </div>
         </div>
+        </form>
 
         <div className="tour-detailed">
           <div className="para23">
@@ -115,11 +142,11 @@ const Single = () => {
               <p class="trip-duration">2 days</p>
             </div>
             <div>
-              {" "}
+            
               <p class="trip-duration">6 People</p>
             </div>
             <div>
-              {" "}
+            
               <p class="trip-participants">18 </p>
             </div>
             <div>

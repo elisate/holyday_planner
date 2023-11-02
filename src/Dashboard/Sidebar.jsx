@@ -12,8 +12,10 @@ import { AiOutlineLogout } from "react-icons/ai";
 import {ImUsers} from "react-icons/im";
 import {BsMessenger} from "react-icons/bs"
 import "./Sidebar.css";
+import { mycontext } from "../context/Contextprovider";
 
 function Sidebar() {
+ 
   return (
     <div className="dashhold">
       <div className="dushboard_header1">
@@ -22,7 +24,8 @@ function Sidebar() {
             <img src="../elisa2.jpeg" className="photodash" />
           </div>
           <div className="nameelisa">
-            <h4>ELISA </h4>
+            <h4>{JSON.parse(localStorage.getItem("userData"))?.user.role} </h4>
+            
           </div>
         </div>
         <div className="sidebar_subholder">

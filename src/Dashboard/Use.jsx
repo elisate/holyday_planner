@@ -7,30 +7,32 @@ import {AiFillDelete} from 'react-icons/ai';
 import './use.css';
 import Edituser from './Edituser';
 import Notiflix from "notiflix";
+import { mycontext } from '../context/Contextprovider';
 function Use() {
     const [isEditModalOpen, setEditModalOpen] = useState(false);
     const handleEditClick = () => {
       setEditModalOpen((previsEditModal) => !previsEditModal);
     };
-const [SiteUser, SetSiteUser] = useState([]);
- const FecthData= async () => {
-    try{
-        const {data} = await axios.get(`https://holidayplanner.onrender.com/auth`
+    const { siteuser } = mycontext();
+// const [SiteUser, SetSiteUser] = useState([]);
+//  const FecthData= async () => {
+//     try{
+//         const {data} = await axios.get(`https://holidayplanner.onrender.com/auth`
 
-        );
+//         );
           
-   if (data) {
-          console.log(data.data);
-          SetSiteUser(data.data);
-        }
-      } catch (error) {
-        console.log({ error });
-      }
-    };
+//    if (data) {
+//           console.log(data.data);
+//           SetSiteUser(data.data);
+//         }
+//       } catch (error) {
+//         console.log({ error });
+//       }
+//     };
 
-      useEffect(() => {
-        FecthData();
-      }, []);
+//       useEffect(() => {
+//         FecthData();
+//       }, []);
 
        const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
        const [userToDelete, setUserToDelete] = useState(null);
@@ -73,7 +75,7 @@ const [SiteUser, SetSiteUser] = useState([]);
   return (
     <div className="use1">
       {isEditModalOpen && <Edituser handleEditClick={handleEditClick} />}
-      <table className='usetable'>
+      <table className="usetable">
         <thead>
           <tr className="tab1">
             <th>FullNames</th>
@@ -85,8 +87,8 @@ const [SiteUser, SetSiteUser] = useState([]);
           </tr>
         </thead>
         <tbody>
-          {SiteUser.map((item) => (
-            <tr className='tab2'>
+          {siteuser.map((item) => (
+            <tr className="tab2">
               <td>{item.FullNames}</td>
               <td>{item.email}</td>
               <td>{item.phoneNumber}</td>
