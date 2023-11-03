@@ -12,9 +12,10 @@ import { AiOutlineLogout } from "react-icons/ai";
 import {ImUsers} from "react-icons/im";
 import {BsMessenger} from "react-icons/bs"
 import "./Sidebar.css";
-import { mycontext } from "../context/Contextprovider";
+
 
 function Sidebar() {
+ 
  
   return (
     <div className="dashhold">

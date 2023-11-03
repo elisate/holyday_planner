@@ -20,6 +20,7 @@ import { Appcontext } from "./context/Contextprovider";
 import Place from "./Dashboard/Place";
 import Alldashboard from "./Dashboard/Alldashboard";
 import Card1dashb from "./Dashboard/Card1dashb";
+import Responsivedash from "./Dashboard/Responsivedash";
 
 
 const Layout = () => {
@@ -66,6 +67,7 @@ function App() {
             <Route path="tours" element={<TourArray />} />
             <Route path="log_to_out" element={<Login />} />
             <Route path="placee" element={<Place />} />
+             <Route path="resol" element={<Responsivedash/>}/> 
           </Route>
         </Routes>
       </BrowserRouter>

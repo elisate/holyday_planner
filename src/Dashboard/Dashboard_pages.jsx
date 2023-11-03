@@ -1,5 +1,6 @@
 import React from "react";
-import './Dashboard_pages.css'
+import './Dashboard_pages.css';
+import './Alldashboard.css';
 import {
   AreaChart,
   Area,

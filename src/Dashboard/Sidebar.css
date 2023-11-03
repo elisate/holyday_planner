@@ -77,4 +77,38 @@
   color: black;
   padding-top: 3rem;
 }
+@media screen and (max-width: 768px) {
+  .sidebar_subholder {
+  display: none;
+}
+.dushboard_header1
+{
+  
+  box-shadow:none
+}
+.dashhold
+{
+box-shadow: none;
+}
+.image_sidebar
+{
+  padding-left:0.2rem;
+ position: relative;
+ z-index: 8888;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+}
+.custom-background-color
+{
+  z-index: 888888;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+}
 
+  

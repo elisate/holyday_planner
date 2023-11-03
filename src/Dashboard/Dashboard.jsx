@@ -10,7 +10,6 @@ export default function Dashboard() {
       <Navbar />
       <Sidebar />
       <div className="custom-background-color">
-
         <Outlet />
       </div>
     </div>

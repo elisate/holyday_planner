@@ -3,30 +3,79 @@ import React from "react";
  import {BsSun} from 'react-icons/bs';
 import { MdOutlineDarkMode } from "react-icons/md";
 import'./Navbar.css';
+import {BiMessageRoundedDots} from "react-icons/bi";
+import {IoMdNotificationsOutline} from "react-icons/io";
+import {HiOutlineMenuAlt3} from "react-icons/hi";
+import {FaSearch} from "react-icons/fa";
+import { useEffect } from "react";
+import { useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import Responsivedash from "./Responsivedash";
 function Navbar() {
-  return (
+  const [SiteUser, SetSiteUser] = useState([]);
+  const FecthData = async () => {
+    try {
+      const { data } = await axios.get(
+        `https://holidayplanner.onrender.com/contact/`
+      );
+
+      if (data) {
+        console.log(data.data);
+        SetSiteUser(data.data);
+      }
+    } catch (error) {
+      console.log({ error });
+    }
+  };
+
+  useEffect(() => {
+    FecthData();
+  }, []);
+
    
-      <div className="holder_nav_dash">
-        <div className="end_navbar_top1">
-          <div className="yane">
-            <h4> Hello,ELISA</h4>
+  
+  
+  return (
+    <div className="holder_nav_dash">
+     
+
+      <div className="end_navbar_top1">
+        <div className="yane">
+          <div>
+          
+   <HiOutlineMenuAlt3  className="menu"/>
+              
+           
+          
           </div>
           <div>
-            <LuSettings className="setting"/>
+            <BiMessageRoundedDots className="notmessage" />
+            <p className="lm">{SiteUser.length}</p>
+          </div>
+          <div>
+            <IoMdNotificationsOutline className="notmessage2" />
           </div>
         </div>
-        <div className="end_navbar_top">
-          <div>
-            <BsSun className="sun" />
-          </div>
-          <div>Darkmode</div>
-          <div>
-            <MdOutlineDarkMode className="moon" />
-          </div>
+        <p>
+          <input type="text" placeholder="search" className="search" />
+          <FaSearch className="fasearch" />
+        </p>
+
+        <div>
+          <LuSettings className="setting" />
         </div>
       </div>
-      
-   
+      <div className="end_navbar_top">
+        <div>
+          <BsSun className="sun" />
+        </div>
+        <div>Darkmode</div>
+        <div>
+          <MdOutlineDarkMode className="moon" />
+        </div>
+      </div>
+    </div>
   );
 }
 
