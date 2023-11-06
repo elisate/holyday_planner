@@ -43,7 +43,7 @@
   display: flex;
   flex-direction: row;
   gap: 22.9rem;
-  margin-left: 5rem;
+  margin-left: 4.9rem;
   
   position:absolute;
   margin-top: 6rem;
@@ -238,6 +238,24 @@ border-radius: 5px;
   padding-bottom: 1rem;
 }
 
+.BUTTOt{
+  background-color: #C29D59;
+  width: 7rem;
+  height: 2.2rem;
+  padding-left: 4rem;
+  padding-top: 0.4rem;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+
+  
+}
+.BUTTOt a{
+  
+text-decoration: none;
+color: black;
+  
+}
 
  @media screen and (max-width: 1114px){ 
  .section1

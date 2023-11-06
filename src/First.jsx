@@ -8,18 +8,17 @@ import { FaFacebookF } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import { AiOutlineTwitter } from "react-icons/ai";
 import Navtopages from "./pages/Navtopages";
-import {HiMenuAlt3} from 'react-icons/hi';
+import { HiMenuAlt3 } from "react-icons/hi";
+import Status_loged from "../Status_loged";
 
 function First() {
-
   const [modal, setModal] = useState(false);
 
-  
-
   return (
-    <div> {modal && <Navtopages />}
+    <div>
+      {" "}
+      {modal && <Navtopages />}
       <div className="first">
-       
         <div className="section2">
           <div className="container">
             <div className="contacts">
@@ -61,9 +60,10 @@ function First() {
           <div className="subsection">
             <div className="but">
               <div>
-            <a href="loginbutton"><button type="submit" className="BUTTO">
+                {/* <a href="loginbutton"><button type="submit" className="BUTTO">
                   LOGIN
-                </button></a> 
+                </button></a>  */}
+                <Status_loged />
               </div>
               <div className="icon1">
                 <HiOutlineSearchCircle className="icon1" />
