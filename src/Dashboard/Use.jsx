@@ -8,31 +8,14 @@ import './use.css';
 import Edituser from './Edituser';
 import Notiflix from "notiflix";
 import { mycontext } from '../context/Contextprovider';
-function Use() {
+import ReactPaginate from "react-paginate";
+
+function Use(){
     const [isEditModalOpen, setEditModalOpen] = useState(false);
     const handleEditClick = () => {
       setEditModalOpen((previsEditModal) => !previsEditModal);
     };
-    const { siteuser } = mycontext();
-// const [SiteUser, SetSiteUser] = useState([]);
-//  const FecthData= async () => {
-//     try{
-//         const {data} = await axios.get(`https://holidayplanner.onrender.com/auth`
-
-//         );
-          
-//    if (data) {
-//           console.log(data.data);
-//           SetSiteUser(data.data);
-//         }
-//       } catch (error) {
-//         console.log({ error });
-//       }
-//     };
-
-//       useEffect(() => {
-//         FecthData();
-//       }, []);
+    
 
        const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
        const [userToDelete, setUserToDelete] = useState(null);
@@ -57,7 +40,7 @@ function Use() {
              () => {
                alert("If you say so...");
              },
-             {}
+             
            );
          } catch (error) {
            console.log(error);
@@ -71,14 +54,26 @@ function Use() {
        const handleCancelDelete = () => {
          setShowDeleteConfirm(false);
        };
+const {siteuser} = mycontext();
 
+const [pagenumber, setPagenumber] = useState(0);
+const userPerPage = 4;
+const pageVisited = pagenumber*userPerPage;
+const displayusers = siteuser.slice(pageVisited, pageVisited + userPerPage)
+  
+
+
+const change =({selected})=>{
+   setPagenumber(selected);
+   
+  }
   return (
     <div className="use1">
       {isEditModalOpen && <Edituser handleEditClick={handleEditClick} />}
       <table className="usetable">
         <thead>
           <tr className="tab1">
-            <th>FullNames</th>
+        
             <th>email</th>
             <th>phoneNumber</th>
             <th>role</th>
@@ -87,9 +82,9 @@ function Use() {
           </tr>
         </thead>
         <tbody>
-          {siteuser.map((item) => (
+          {displayusers?.map((item) => (
             <tr className="tab2">
-              <td>{item.FullNames}</td>
+             
               <td>{item.email}</td>
               <td>{item.phoneNumber}</td>
               <td>{item.role}</td>
@@ -112,10 +107,21 @@ function Use() {
               <button onClick={handleCancelDelete}>Cancel</button>
             </div>
           )}
+          {/* {displayusers} */}
         </tbody>
       </table>
+      <ReactPaginate
+        previousLabel={"Previos"}
+        nextLabel={"Next"}
+        pageCount={Math.ceil(siteuser?.length / userPerPage)}
+        onPageChange={change}
+        containerClassName={"paginationbuttons"}
+        previousLinkClassName={"previosbuttons"}
+        nextLinkClassName={"nextbuttons"}
+        disabledClassName={"paginationdisabled"}
+        activeClassName={"paginationactive"}
+      />
     </div>
   );
 }
-
-export default Use
+export default Use;

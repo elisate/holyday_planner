@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import fectching from "../API/fetching";
+import { data } from "jquery";
 // import { Axios } from "axios";
 const statement = createContext();
 
@@ -30,13 +31,15 @@ export const Appcontext = ({ children }) => {
   const [siteuser, SetSiteuser] = useState([]);
   const FecthData = async () => {
     try {
-      const { data } = await fectching.get(
+      const result = await fectching.get(
         `https://holidayplanner.onrender.com/auth`
       );
+      
 
       if (data) {
-        console.log(data.data);
-        SetSiteuser(data.data);
+        console.log("=============================",result.data.data);
+        localStorage.setItem("users", JSON.stringify(result.data));
+        SetSiteuser(result.data.data);
       }
     } catch (error) {
       console.log({ error });
@@ -46,26 +49,7 @@ export const Appcontext = ({ children }) => {
   useEffect(() => {
     FecthData();
   }, []);
-
-  // const [user, SetUser] = useState([]);
-  // const FecthInfo= async () => {
-  //   try {
-  //     const { data } = await fectching.get(
-  //       `https://holidayplanner.onrender.com/auth/findone/${email}`
-  //     );
-
-  //     if (data) {
-  //       console.log(data.data);
-  //       SetUser(data.data);
-  //     }
-  //   } catch (error) {
-  //     console.log({ error });
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   FecthInfo();
-  // }, []);
+  
   let userData = JSON.parse(localStorage.getItem("userData"));
   let token = userData?.access_token;
   let email = userData?.user.email;

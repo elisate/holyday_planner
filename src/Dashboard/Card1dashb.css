@@ -36,7 +36,8 @@
   border-radius: 50%;
   padding-left: 0.5rem;
   padding-top: 0.5rem;
-   
+  position: relative;
+  
 }
 .CDa1{
  
@@ -97,6 +98,7 @@
   height: 1rem;  position: relative;
   margin-top: -10rem;
   display: none;
+
 }
   /* .CD1{
     margin-left: 7rem;

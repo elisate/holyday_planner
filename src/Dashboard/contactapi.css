@@ -7,3 +7,23 @@
     background-color: white;
     justify-content: center;
 }
+.paginationbuttons
+{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+    margin-left: 17rem;
+}
+.previosbuttons
+{
+    background-color: #C29D59;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+}
+.nextbuttons
+{
+    background-color: #C29D59;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+}

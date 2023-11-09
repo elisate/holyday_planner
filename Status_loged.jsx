@@ -20,7 +20,7 @@ const Status_loged = () => {
     );
   } else {
     return (
-      <div className="BUTTOt" onClick={Logout}>
+      <div  className="BUTTOt" onClick={Logout}>
         <span >Logout</span>
       </div>
     );

@@ -62,6 +62,8 @@ function TourArray() {
     setShowDeleteConfirm(false);
   };
 
+  
+  
   return (
     <div className="dash_array_tour">
       {isCreate && <AddFormtours handleCreateClick={handleCreateClick} />}
