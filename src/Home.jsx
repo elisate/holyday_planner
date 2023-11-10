@@ -148,7 +148,7 @@ function Home() {
               </p>
             </div>
             <div>
-              <button type="submit" className="BUTTO">
+              <button type="submit" className="BUTTOr">
                 Read More
               </button>
             </div>

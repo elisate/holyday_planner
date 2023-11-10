@@ -5,7 +5,7 @@ import { PiInstagramLogoFill } from "react-icons/pi";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import {AiOutlineCloseCircle}  from 'react-icons/ai'
 import { Link } from "react-router-dom";
-function Navtopages() {
+function Navtopages({open}) {
   return (
     <>
       <section className="holder">
@@ -15,7 +15,7 @@ function Navtopages() {
               <img src="white-logo.png" alt="log" />
             </div>
             <div>
-              <AiOutlineCloseCircle className="close_icon" />
+              <AiOutlineCloseCircle className="close_icon" onClick={open}/>
             </div>
 
             <div className="allpages">

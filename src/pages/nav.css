@@ -2,9 +2,9 @@
   background-color: #2b2b2b;
 }
 .allpages {
-  margin-top: 8rem; /* This creates the 1rem margin at the top */
-  position: absolute; /* This allows you to position it precisely */
-  top: 4rem; /* Adjust this value based on the height of your navigation bar */
+  margin-top: 8rem; 
+  position: absolute; 
+  top: 4rem; 
 
   display: flex;
   flex-direction: row;
@@ -12,14 +12,14 @@
   gap: 20rem;
 }
 .pad {
-  margin-top: 2rem; /* This creates the 1rem margin at the top */
-  position: absolute; /* This allows you to position it precisely */
-  top: 4rem; /* Adjust this value based on the height of your navigation bar */
+  margin-top: 2rem; 
+  position: absolute; 
+  top: 4rem; 
   padding-left: 3.9rem;
 }
 .all {
   background-color: #393939;
-  margin: 0; /* This sets the margin to zero */
+  margin: 0;
   padding-left: 5rem;
   width: 34rem;
   height: 13rem;
@@ -27,7 +27,7 @@
   margin-bottom: 2rem;
   color: white;
 
-  text-decoration: none; /* This removes the underline or decoration */
+  text-decoration: none; 
 }
 .all li a:hover {
   text-decoration: line-through;
@@ -69,18 +69,18 @@
   color: #c29d59;
 }
 .all ul li {
-  text-decoration: none; /* This removes the underline or decoration */
+  text-decoration: none; 
   list-style: none;
   color: white;
   font-size: 1.3rem;
 }
 .navpost {
   position: absolute;
-  /* background-color: red; */
+
 }
 .holder {
   position: fixed;
-  /* border: 1px solid red; */
+
   top: 0;
   left: 0;
   bottom: 0;
@@ -111,10 +111,12 @@
   animation: scrollFromRight 1s ease;
 }
 .close_icon {
-  margin-left: 74rem;
+  margin-left: 69rem;
   width: 3rem;
   height: 3rem;
   margin-top: 7rem;
+  
+  position: relative;
 }
 
 
@@ -130,5 +132,19 @@ padding-left: 1rem;
 {
   margin-left: 0.5rem;
 }
+.close_icon {
+  margin-left: 20rem;
+  width: 3rem;
+  height: 3rem;
+  margin-top: 14rem;
+  z-index: 88888;
+  top:0;
+  bottom:0;
+  right: 0;
+  left: 0;
+ 
+}
+
+
   
 }

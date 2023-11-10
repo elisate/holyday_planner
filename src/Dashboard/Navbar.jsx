@@ -10,8 +10,8 @@ import {FaSearch} from "react-icons/fa";
 import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import Responsivedash from "./Responsivedash";
+import Navtomenu from "./Navtomenu";
+
 function Navbar() {
   const [SiteUser, SetSiteUser] = useState([]);
   const FecthData = async () => {
@@ -33,49 +33,49 @@ function Navbar() {
     FecthData();
   }, []);
 
-   
+   const [modal,setModal] =useState(false);
+   const handlemodal=()=>{
+    setModal(!modal);
+   }
   
   
   return (
-    <div className="holder_nav_dash">
-     
+    <>
+      {modal && <Navtomenu handlemodal={handlemodal}/>}
+      <div className="holder_nav_dash">
+        <div className="end_navbar_top1">
+          <div className="yane">
+            <div>
+              <HiOutlineMenuAlt3 className="menu" onClick={handlemodal} />
+            </div>
+            <div>
+              <BiMessageRoundedDots className="notmessage" />
+              <p className="lm">{SiteUser.length}</p>
+            </div>
+            <div>
+              <IoMdNotificationsOutline className="notmessage2" />
+            </div>
+          </div>
+          <p>
+            <input type="text" placeholder="search" className="search" />
+            <FaSearch className="fasearch" />
+          </p>
 
-      <div className="end_navbar_top1">
-        <div className="yane">
           <div>
-          
-   <HiOutlineMenuAlt3  className="menu"/>
-              
-           
-          
-          </div>
-          <div>
-            <BiMessageRoundedDots className="notmessage" />
-            <p className="lm">{SiteUser.length}</p>
-          </div>
-          <div>
-            <IoMdNotificationsOutline className="notmessage2" />
+            <LuSettings className="setting" />
           </div>
         </div>
-        <p>
-          <input type="text" placeholder="search" className="search" />
-          <FaSearch className="fasearch" />
-        </p>
-
-        <div>
-          <LuSettings className="setting" />
+        <div className="end_navbar_top">
+          <div>
+            <BsSun className="sun" />
+          </div>
+          <div>Darkmode</div>
+          <div>
+            <MdOutlineDarkMode className="moon" />
+          </div>
         </div>
       </div>
-      <div className="end_navbar_top">
-        <div>
-          <BsSun className="sun" />
-        </div>
-        <div>Darkmode</div>
-        <div>
-          <MdOutlineDarkMode className="moon" />
-        </div>
-      </div>
-    </div>
+    </>
   );
 }
 

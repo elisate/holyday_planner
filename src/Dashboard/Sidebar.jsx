@@ -2,11 +2,7 @@ import React from "react";
 import { BiSolidDashboard } from "react-icons/bi";
 import { FaLocationDot } from "react-icons/fa6";
 import { BiSolidPlaneAlt } from "react-icons/bi";
-import { CiCalendarDate } from "react-icons/ci";
-import { FaCampground } from "react-icons/fa";
-import { FaRegCalendarAlt } from "react-icons/fa";
-import { BsChatDots } from "react-icons/bs";
-import { BsFillCircleFill } from "react-icons/bs";
+
 import { MdExpandMore } from "react-icons/md";
 import { AiOutlineLogout } from "react-icons/ai";
 import {ImUsers} from "react-icons/im";

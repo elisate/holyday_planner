@@ -13,11 +13,14 @@ import Status_loged from "../Status_loged";
 
 function First() {
   const [modal, setModal] = useState(false);
+  const open=()=>{
+    setModal(!modal);
+
+  }
 
   return (
     <div>
-      {" "}
-      {modal && <Navtopages />}
+      {modal && <Navtopages open={open} />}
       <div className="first">
         <div className="section2">
           <div className="container">
@@ -60,19 +63,17 @@ function First() {
           <div className="subsection">
             <div className="but">
               <div>
-               
                 <Status_loged />
               </div>
               <div className="icon1">
                 <HiOutlineSearchCircle className="icon1" />
               </div>
             </div>
-            <div
-              className="h"
-              onClick={() => {
+            <div className="h" onClick={open}>
+              {/* onClick=
+              {() => {
                 setModal(!modal);
-              }}
-            >
+              }} */}
               <h1>
                 <HiMenuAlt3 className="hic" />
               </h1>

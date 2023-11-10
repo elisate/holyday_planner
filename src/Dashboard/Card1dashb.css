@@ -95,20 +95,24 @@
 .CDa1{
  
    width:1rem;
-  height: 1rem;  position: relative;
+  height: 1rem;  
   margin-top: -10rem;
   display: none;
 
 }
-  /* .CD1{
-    margin-left: 7rem;
-    
-    background-color: white;
-      width:1rem;
-    height: 1rem;
-    border-radius: 50%;
 
-    
-    
-  } */
+
+  .CD1{
+  margin-left: 7rem;
+  margin-top: -5rem;
+   background-color: white;
+    width:1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  position: relative;
+  display: none;
+  
+}
 }
