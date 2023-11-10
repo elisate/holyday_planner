@@ -84,7 +84,9 @@
 .dushboard_header1
 {
   
-  box-shadow:none
+  box-shadow:none;
+
+  
 }
 .dashhold
 {
@@ -94,7 +96,7 @@ box-shadow: none;
 {
   padding-left:0.2rem;
  position: relative;
- z-index: 8888;
+ z-index: 888888888;
  top: 0;
  left: 0;
  right: 0;
