@@ -60,9 +60,7 @@ function First() {
           <div className="subsection">
             <div className="but">
               <div>
-                {/* <a href="loginbutton"><button type="submit" className="BUTTO">
-                  LOGIN
-                </button></a>  */}
+               
                 <Status_loged />
               </div>
               <div className="icon1">

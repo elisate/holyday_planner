@@ -17,6 +17,10 @@ const slides = [
     image: "india3.jpg",
     text: "",
   },
+  {
+image:"houses.jpg",
+text:"",
+  },
 ];
 
 function BackgroundSlider() {
